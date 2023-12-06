@@ -27,8 +27,91 @@
             </div>
             <div class="icons"></div>
         </div>
-        <div class="main"></div>
-        <div class="footer"></div>
+
+        
+        <div class="main">
+<div class="loginForm">
+<label for = "name">Name:</label>
+<input type="text" id = "name" name = "name" required>
+<label for = "email">Email:</label>
+<input type="text" id = "email" name = "email" required>
+<label for = "password">Password:</label>
+<input type="password" id = "password" name = "password" required>
+<label for = "confirmpassword">Confirm Password:</label>
+<input type="password" id = "confirmpassword" name = "confirmpassword" required>
+<button type = "submit" >Register</button>
+</div>
+
+<script>
+    function validationform(){
+        var name = document.getElementbyId('name').value;
+        var name = document.getElementbyId('email').value;
+        var name = document.getElementbyId('password').value;
+        var name = document.getElementbyId('confirmpassword').value;
+       
+        var nameRegex = /^[a-zA-Z\s]-$/;
+        if(!nameRegex.test(name)){
+            alert('Please enter a valid name.');
+            return false;
+        }
+        var emailRegex = /^[\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(!nameRegex.test(email)){
+            alert('Please enter a valid email.');
+            return false;
+        }
+     if(password.length<6){
+        alert('Password must be ;east 6 characters');
+     }
+     
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <div class="footer">
+            <div class="contactus">
+<div class="customerSupport"></div>
+
+<div class="FrequentlyAskedQuestions"></div>
+<div class="OrdersandDeliveries"></div>
+   <div class="Returns">
+
+</div>
+            </div>
+            <div class="Ae">
+            <div class="About Ecommerce">
+                <h1>hello</h1>
+            </div>
+            <div class="AboutUs"></div>
+            <div class="Careers"></div>
+            <div class=" Corporate Information"></div>
+            <div class=" Accessibility"></div>
+        </div>
+        <div class="social">
+            <h6>Social</h6>
+            <img src="./instagram-svgrepo-com 1.png" alt="instagram">
+            <img src="./facebook-svgrepo-com 1.png" alt="facebook">
+            <img src="./pinterest-svgrepo-com 1.png" alt="pinterest">
+            <img src="./logo-twitter-svgrepo-com 1.png" alt="twitter">
+        </div>
+
+        </div>
+        <div class="frame2">
+
+        </div>
     </div>
 </body>
 </html>
