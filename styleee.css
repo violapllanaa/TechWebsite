@@ -71,3 +71,45 @@ font-style: normal;
 font-weight: 500;
 line-height: normal;
 }
+.main{
+    width: 1200px;
+    height:800px;
+    border: 1px solid black;
+    align-items: center;
+padding: 10px 20px;
+margin: 20px 10px;
+
+}
+.footer{
+    width: 1200px;
+height: 150px;
+/* border: 1px solid red; */
+/* background-color: blue; */
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 20px;
+margin: 20px 10px;
+background: rgba(229, 225, 225, 1.00);
+}
+.frame2{
+    width: 1200px;
+    height: 80px;
+    /* border: 1px solid red; */
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 20px 10px;
+    background: rgba(229, 225, 225, 1.00);
+}
+.loginForm{
+    width: 500px;
+    height:200px ;
+    border: 1px solid red;
+    display: flex;
+flex-direction: column;
+    align-items: center;
+    margin: 200px;
+}
