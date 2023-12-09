@@ -1,0 +1,152 @@
+
+.contanier{
+    width: 100%;
+
+
+}
+.header{
+width: 1200px;
+height: 150px;
+/* border: 1px solid red; */
+/* background-color: blue; */
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 20px;
+margin: 20px 10px;
+background: rgba(229, 225, 225, 1.00);
+border: 1px solid red;
+
+}
+
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 60%;
+  height: 50px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px;
+border-color: lightslategray;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+  width: 60%;
+
+}
+.formdiv{
+    display: flex;
+
+}
+.formdiv-data{
+    display: flex;
+    flex-direction: column;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  /* padding: 14px 20px; */
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  opacity: 0.9;
+  height: 50px;
+  margin-left: 60px;
+  border-radius: 10px;
+}
+
+button:hover {
+  opacity:1;
+  background-color: cornsilk;
+  color: black;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  /* padding: 14px 20px; */
+  background-color: #f44336;
+  border-radius: 10px;
+}
+.cancelbtn:hover {
+    opacity:1;
+    background-color: cornsilk;
+    color: black;
+  }
+  
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  /* width: 50%; */
+}
+
+/* Add padding to container elements */
+.container-main {
+  padding: 50px  56px;
+  width: 800px;
+  height: 560px;
+  border: 1px solid red;
+  align-items: center;
+  display: flex;
+justify-content: center;
+
+}
+
+Clear floats
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}
+.form{
+    width: 700px;
+background-color: navajowhite;
+
+}
+.main{
+    width: 1200px;
+    height:700px;
+    border: 1px solid black;
+    align-items: center;
+padding: 10px 20px;
+margin: 20px 10px;
+display: flex;
+justify-content: center;
+
+}
+.footer{
+    width: 1200px;
+height: 150px;
+/* border: 1px solid red; */
+/* background-color: blue; */
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 20px;
+margin: 20px 10px;
+background: rgba(229, 225, 225, 1.00);
+}
+
