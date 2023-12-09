@@ -105,30 +105,3 @@
 .div a:hover {
   color: black;
 }
-@media only screen and (max-width: 600px) {
-  .screen{
-    width: 600px;
-    height: 100vh;
-  }
-  .form-row {
-    display: block;
-    margin-bottom: 10px;
-  }
-  .box {
-    width: 100%;
-  }
-}
-@media only screen and (min-width: 601px)
- and (max-width: 1024px) {
-  .screen{
-    width: 601px;
-    height: 100vh;
-  }
-}
-
-@media only screen and (min-width: 1025px) {
-  .screen{
-    width: 1025px;
-    height: 100vh;
-}
-}

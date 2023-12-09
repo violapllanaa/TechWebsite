@@ -1,15 +1,14 @@
-.screen{
+.screen {
   font-family: Arial, sans-serif;
   margin: 0;
-   padding: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-.bacground_contanier{
+.bacground_contanier {
   position: relative;
-
 }
 .loginForm {
   position: absolute;
@@ -20,31 +19,25 @@
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 h2 {
   text-align: center;
 }
-.forms{
-/* border: 1px solid red; */
-width: 350px;
-height: 150px;
-align-items: center;
-display: flex;
-flex-direction: column;
-/* margin: 1px 10px; */
-padding: 30px 10px;
+.forms {
+  width: 350px;
+  height: 150px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 10px;
 }
 .form_input-group {
   margin-bottom: 15px;
   width: 290px;
-
 }
-
 .form_input-group label {
   display: block;
   margin-bottom: 5px;
 }
-
 .form_input-group input {
   width: 100%;
   padding: 8px;
@@ -53,18 +46,15 @@ padding: 30px 10px;
   height: 20px;
 }
 
-
 .button-submit:hover {
   opacity: 0.5;
-
 }
-.button-submit{
-width: 380px;
-/* border: 1px solid red; */
-height: 60px;
-align-items: center;
-display: flex;
-justify-content: center;
+.button-submit {
+  width: 380px;
+  height: 60px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 .btn {
   padding: 8px;
@@ -77,25 +67,19 @@ justify-content: center;
   color: white;
   align-items: center;
   justify-content: center;
-  /* border: 1px solid red; */
-  /* margin-top: 40px; */
 }
 
-.div{
+.div {
   width: 280px;
   height: 40px;
-  /* border: 1px solid red; */
   display: flex;
- justify-content: space-between;
- align-items: center;
- /* margin-right: 270px;
- margin-bottom: 30px; */
+  justify-content: space-between;
+  align-items: center;
 }
-.div a{
+.div a {
   text-decoration: none;
-color: red;
+  color: red;
 }
-.div a:hover{
+.div a:hover {
   color: black;
-
-} 
+}
