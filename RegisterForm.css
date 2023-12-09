@@ -1,21 +1,27 @@
 .screen {
   width: 100%;
+  margin: 0 auto;
   height: 100vh;
-  /* background-color: lightslategray; */
+  /* padding: 0px 0px; */
+
   display: flex;
   justify-content: center;
   align-items: center;
+  /* background-image: url("contanier.jpg"); */
+}
+.bacground_contanier{
+  position: relative;
+  width: 1100px;
+  height: 1000px;
 }
 .title {
   width: 500px;
   height: 50px;
-  /* border: 1px solid red; */
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-
 }
 .forms {
   width: 500px;
@@ -25,6 +31,8 @@
   align-items: center;
 }
 .registerform {
+
+  position: absolute;
   width: 500px;
   height: 460px;
   padding: 30px 30px;
@@ -46,15 +54,14 @@
 }
 .button-submit:hover {
   opacity: 0.5;
-
 }
-.button-submit{
-width: 300px;
-/* border: 1px solid red; */
-height: 100px;
-align-items: center;
-display: flex;
-justify-content: center;
+.button-submit {
+  width: 300px;
+  /* border: 1px solid red; */
+  height: 100px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 .btn {
   padding: 8px;
@@ -82,21 +89,20 @@ justify-content: center;
   border-radius: 5px;
 }
 
-.div{
+.div {
   width: 230px;
   height: 40px;
   /* border: 1px solid red; */
   display: flex;
- justify-content: space-between;
- align-items: center;
- /* margin-right: 270px;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-right: 270px;
  margin-bottom: 30px; */
 }
-.div a{
+.div a {
   text-decoration: none;
-color: red;
+  color: red;
 }
-.div a:hover{
+.div a:hover {
   color: black;
-
 }

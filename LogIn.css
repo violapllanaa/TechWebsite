@@ -1,15 +1,18 @@
 .screen{
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #ffffff; /* Sfondi i bardhë */
+   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
+.bacground_contanier{
+  position: relative;
 
+}
 .loginForm {
+  position: absolute;
   width: 380px;
   height: 400px;
   padding: 20px;
