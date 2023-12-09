@@ -4,20 +4,7 @@
 
 
 }
-.header{
-width: 1200px;
-height: 150px;
-/* border: 1px solid red; */
-/* background-color: blue; */
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 10px 20px;
-margin: 20px 10px;
-background: rgba(229, 225, 225, 1.00);
-border: 1px solid red;
 
-}
 
 * {box-sizing: border-box}
 
@@ -136,17 +123,5 @@ margin: 20px 10px;
 display: flex;
 justify-content: center;
 
-}
-.footer{
-    width: 1200px;
-height: 150px;
-/* border: 1px solid red; */
-/* background-color: blue; */
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 10px 20px;
-margin: 20px 10px;
-background: rgba(229, 225, 225, 1.00);
 }
 
