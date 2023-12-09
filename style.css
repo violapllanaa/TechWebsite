@@ -35,7 +35,9 @@
    }
    .header a:hover::after{
     width: 100%;
+   
    }
+  
 
 .title{
     margin-bottom: 70px;
