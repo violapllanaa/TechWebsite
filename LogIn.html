@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Formulari i Hyrjes</title>
+  <meta charset="utf-8">
+  <title>Log In</title>
   <link rel="stylesheet" href="LogIn.css">
 </head>
 <body>
-
-<div class="container">
-  <form id="loginForm" action="#" method="post">
+<div class="screen">
+<div class="loginForm">
+    <div class="title">
     <h2>Log In</h2>
-    <div class="input-group">
-     
+  </div>
+  <div class="forms">
+    <div class="form_input-group">
       <input type="text" id="username" placeholder="Username" name="username" required>
     </div>
-    <div class="input-group">
-    
+    <div class="form_input-group">
       <input type="password" placeholder= "password" name="password" required>
     </div>
-    <div class="input-group">
-      <button type="submit">Log In</button>
+    <div class="form_input-group">
+      <input type="confirmpassword" placeholder= "Confirm your password" name="password" required>
     </div>
-    <p>If you dont have account ? </p>
-<a href="./RegisterForm.html">Register now</a>
+  </div>
+    <div class="form_input-group">
+      <div class="button-submit">
+      <button type="submit" class = "btn">Log In</button>
+    </div>
+  </div>
+  <div class="div">
+    <p>Don't have an account? </p>
+    <div class="registerForm">
+           <a href="./RegisterForm.html" >Register now</a>
+          </div>
+        </div>
   </form>
 </div>
 
+</div>
 </body>
 </html>

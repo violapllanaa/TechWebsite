@@ -6,15 +6,16 @@
   justify-content: center;
   align-items: center;
 }
-.title{
+.title {
   width: 500px;
   height: 50px;
   /* border: 1px solid red; */
-display: flex;
-justify-content: center   ;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  box-shadow: 0 1px 50px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+
 }
 .forms {
   width: 500px;
@@ -23,13 +24,13 @@ justify-content: center   ;
   flex-direction: column;
   align-items: center;
 }
-.form-div {
+.registerform {
   width: 500px;
-  height: 490px;
+  height: 460px;
   padding: 30px 30px;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 1px 50px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 1px 50px rgba(0, 0, 0, 0.1);
 }
 .form-row {
   display: flex;
@@ -42,41 +43,60 @@ justify-content: center   ;
   flex-direction: column;
   margin: 10px;
   margin-top: 13px;
+}
+.button-submit:hover {
+  opacity: 0.5;
 
 }
-.button-submit {
-  background-color: rgb(35, 7, 135);
-  border: rgb(0, 81, 255);
-  width: 170px;
-  height: 40px;
-  border-radius: 10px;
-  color: white;
- 
-}
-.button-submit:hover{
-  /* background-color: rgb(184, 12, 12); */
-  opacity: 0.5;
-  /* border-color: black; */
+.button-submit{
+width: 300px;
+/* border: 1px solid red; */
+height: 100px;
+align-items: center;
+display: flex;
+justify-content: center;
 }
 .btn {
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
   display: flex;
-  width: 300px;
-  height: 50px;
+  width: 170px;
+  background-color: rgb(0, 85, 255);
+  height: 44px;
+  color: white;
   align-items: center;
   justify-content: center;
   /* border: 1px solid red; */
-  margin-top: 40px;
+  /* margin-top: 40px; */
 }
+
 .box {
   min-height: 22px;
   margin-top: 10px;
-/* border: 2px solid grey; */
+  /* border: 2px solid grey; */
   /* background-color: lightgrey; */
   padding-left: 7px;
   /* color: black; */
   width: 200px;
   border-radius: 5px;
-
 }
 
+.div{
+  width: 230px;
+  height: 40px;
+  /* border: 1px solid red; */
+  display: flex;
+ justify-content: space-between;
+ align-items: center;
+ /* margin-right: 270px;
+ margin-bottom: 30px; */
+}
+.div a{
+  text-decoration: none;
+color: red;
+}
+.div a:hover{
+  color: black;
 
+}

@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Register form</title>
     <link rel="stylesheet" href="./RegisterForm.css" />
   </head>
   <body>
     <div class="screen">
-      <div class="form-div">
+      <div class="registerform">
         <div class="title">
-        <h1>Registration Form</h1>
-      </div>
+          <h1>Register Form</h1>
+        </div>
         <form class="forms">
           <div class="form-row">
             <div class="form_column">
@@ -41,12 +41,21 @@
               <input type="date" class="box" required />
             </div>
             <div class="form_column">
-              
               <label class="labels" for="gender">Gender</label>
               <div class="form_column-checkbox">
-                <input type="radio" id="checkbox1"  class="custom-checkbox" required>
+                <input
+                  type="radio"
+                  id="checkbox1"
+                  class="custom-checkbox"
+                  required
+                />
                 <label> F</label>
-                <input type="radio"  id="checkbox1"  class="custom-checkbox" required />
+                <input
+                  type="radio"
+                  id="checkbox1"
+                  class="custom-checkbox"
+                  required
+                />
                 <label> M</label>
               </div>
             </div>
@@ -54,29 +63,50 @@
           <div class="form-row">
             <div class="form_column">
               <label class="labels" for="email">Email</label>
-              <input type="email" placeholder="Enter your email"class="box" />
+              <input type="email" placeholder="Enter your email" class="box" />
             </div>
             <div class="form_column">
               <label class="labels" for="LastName">Phone Number</label>
-              <input type="text"placeholder="Enter your phone number" class="box" />
+              <input
+                type="text"
+                placeholder="Enter your phone number"
+                class="box"
+              />
             </div>
           </div>
 
           <div class="form-row">
             <div class="form_column">
               <label class="labels" for="password">Password</label>
-              <input type="email" placeholder="Enter your password  "class="box" />
+              <input
+                type="email"
+                placeholder="Enter your password  "
+                class="box"
+              />
             </div>
             <div class="form_column">
-              <label class="labels" for="confirmpassword">Confirm Password</label>
-              <input type="text"placeholder="Enter your confirm password" class="box" />
+              <label class="labels" for="confirmpassword"
+                >Confirm Password</label
+              >
+              <input
+                type="text"
+                placeholder="Enter your confirm password"
+                class="box"
+              />
             </div>
           </div>
-        
-          <div class="btn">
-            <label class="labels" for="button"></label>
-            <button class="button-submit">Submit</button>
+
+          <div class="form_input-group">
+            <div class="button-submit">
+            <button type="submit" class = "btn">Register</button>
           </div>
+        </div>
+        <div class="div">
+        <p>Already have an account ? </p>
+        <div class="registerForm">
+               <a href="./LogIn.html" >Log In </a>
+              </div>
+            </div>
         </form>
       </div>
     </div>
