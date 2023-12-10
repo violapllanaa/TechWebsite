@@ -23,7 +23,7 @@
   border: none;
   height: 100%;
   width: 100%;
-  padding: 0px 26px;
+  padding: 0px 5px;
   border-radius: 50px;
   font-size: 18px;
   font-family: "Nunito";
@@ -41,14 +41,12 @@
 .header{
  width: 85%;
  margin: auto;
- padding: 2rem 9%;
+ padding: 35px 0;
  display: flex;
  align-items: center;
  justify-content: space-between;
  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
- background: radial-gradient(#fff,#d4f0fc);
 }
-
 .header a{
 list-style: none;
 display: inline-block;
@@ -63,7 +61,7 @@ text-transform: uppercase;
  content:'';
  height: 3px;
  width: 0%;
- background: #02577a;
+ background: red;
  position: absolute;
  left: 0;
  bottom: -10px;
@@ -79,11 +77,10 @@ text-transform: uppercase;
 
 .center-text h2{
   color: black;
-  font-size: 48px;
+  font-size: 28px;
   text-transform: capitalize;
   text-align: center;
-  margin-bottom: 10px;
-  padding: 50px;
+  margin-bottom: 30px;
 }
 
 
@@ -96,6 +93,7 @@ text-transform: uppercase;
   text-align: center;
   padding-top: 2rem;
   overflow: hidden;
+  
 }
 
 .productss{
@@ -111,12 +109,53 @@ text-transform: uppercase;
   transform: scale(0.9);
 }
 .footer{
-  width: 100%;
-height: 100px;
+  width: 1200px;
+height: 300px;
 /* border: 1px solid red; */
 /* background-color: blue; */
 display: flex;
 justify-content: space-between;
 align-items: center;
-background: radial-gradient(#fff,#d4f0fc);
+padding: 10px 20px;
+margin: 20px 10px;
+background: rgba(229, 225, 225, 1.00);
+}
+
+.right_side{
+  width: 200px;
+  height: 190px;
+  border: 1px solid red;
+  display: flex;
+flex-direction: column;
+align-items: center;
+font-size: 25px;
+}
+.left_side{
+  width: 200px;
+  height: 190px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+align-items: center;
+font-size: 25px;
+}
+.right_side a{
+text-decoration: none;
+color: black;
+}
+.left_side a{
+  text-decoration: none;
+  color: black;
+}
+.social{
+  width: 300px;
+  height: 150px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+align-items: center;
+font-size: 25px;
+}
+.social_div{
+
 }

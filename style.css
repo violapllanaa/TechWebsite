@@ -26,7 +26,7 @@
     content:'';
     height: 3px;
     width: 0%;
-    background: red;
+    background: rgb(0, 85, 255);
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -52,7 +52,7 @@ font-weight: 600;
 line-height: normal;
 }
 .tech{
-    color: #F6A973;
+    color: rgb(0, 85, 255);
 }
  .menu{
     width: 400px;
@@ -88,8 +88,8 @@ background: #FFF;
 .logIn_btn{
     width: 150px;
     height: 40px;
-background-color: darkorange;
-border: 1px solid darkorange;
+background-color: rgb(0, 85, 255);
+border: 1px solid rgb(0, 85, 255);
 
 border-radius: 10px;
 
@@ -157,7 +157,7 @@ justify-content: center;
 
 .button{
 display: inline-block;
-background: #04165D;
+background: rgb(0, 85, 255);
 color: #FFF;
 padding: 8px 30px;
 margin: 30px 0;
