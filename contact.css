@@ -1,0 +1,87 @@
+.screen {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .bacground_contanier {
+    position: relative;
+  }
+  .ContactUsForm{
+    position: absolute;
+    width: 380px;
+    height: 400px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    text-align: center;
+  }
+  .forms {
+    width: 350px;
+    height: 150px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10px;
+  }
+  .form_input-group {
+    margin-bottom: 15px;
+    width: 290px;
+  }
+  .form_input-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .form_input-group input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    height: 20px;
+  }
+  
+  .button-submit:hover {
+    opacity: 0.5;
+  }
+  .button-submit {
+    width: 300px;
+    height: 60px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+
+  }
+  .btn {
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+    display: flex;
+    width: 170px;
+    background-color: rgb(0, 85, 255);
+    height: 44px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+  }
+  .div {
+    width: 280px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .div a {
+    text-decoration: none;
+    color: red;
+  }
+  .div a:hover {
+    color: black;
+  }
+  
