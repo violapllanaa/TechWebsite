@@ -103,6 +103,7 @@ text-transform: uppercase;
 .main{
   position: relative;
   transition: all .40s;
+
 }
 .p1 img:hover{
   transform: scale(0.9);
