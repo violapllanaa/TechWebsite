@@ -8,31 +8,24 @@
   </head>
   <body>
     <div class="screen">
-      <div class="backround_contanier">
+      <!-- <div class="background_contanier">
         <img src="./contanier.jpg"  alt="contanier"
        
       >
-      </div>
-      <div class="registerform">
-        <div class="title">
+      </div> -->
+      <div class="registerform">  
           <h1>Register Form</h1>
-        </div>
         <form class="forms">
           <div class="form-row">
             <div class="form_column">
               <label class="labels" for="Firstname">First Name</label>
-              <input
-                type="text"
-                class="box"
-                for="name "
-                placeholder="Enter your firstname"
-                required
-              />
-            </div>
+              <input type="text" id="firstname " class="box"
+                for="name " placeholder="Enter your firstname"required/></div>
             <div class="form_column">
-              <label class="labels" for="LastName">Last Name</label>
+              <label class="labels" for="lastname">Last Name</label>
               <input
                 type="text"
+                id="lastname"
                 class="box"
                 placeholder="Enter your lastname"
                 name="lastname    "
@@ -40,24 +33,32 @@
               />
             </div>
           </div>
+
+
+
+
+
           <div class="form-row">
             <div class="form_column">
               <label class="labels" for="birthday">Birthday</label>
-              <input type="date" class="box" required />
+              <input type="date" id = "birthday" class="box" required />
             </div>
+
+
             <div class="form_column">
               <label class="labels" for="gender">Gender</label>
               <div class="form_column-checkbox">
                 <input
                   type="radio"
-                  id="checkbox1"
+              
+                  id="gender"
                   class="custom-checkbox"
                   required
                 />
                 <label> F</label>
                 <input
                   type="radio"
-                  id="checkbox1"
+                  id="gender"
                   class="custom-checkbox"
                   required
                 />
@@ -65,15 +66,27 @@
               </div>
             </div>
           </div>
+
+
+
+
+
+
+
+
+
+
+
           <div class="form-row">
           <div class="form_column">
-              <label class="labels" for="email">Email</label>
-              <input type="email" placeholder="Enter your email" class="box" />
+              <label class="labels" for ="email">Email</label>
+              <input type="email" id = "email " placeholder="Enter your email" class="box" />
             </div>
             <div class="form_column">
-              <label class="labels  " for="LastName">Phone Number</label>
+              <label class="labels  " for="phonenumber">Phone Number</label>
               <input
                 type="text"
+                id = "phonenumber"
                 placeholder="Enter your phone number"
                 class="box"
               />
@@ -84,17 +97,19 @@
             <div class="form_column">
               <label class="labels" for="password">Password</label>
               <input
-                type="email"
+                type="password"
+                id="password"
                 placeholder="Enter your password  "
                 class="box"
               />
             </div>
             <div class="form_column">
               <label class="labels" for="confirmpassword"
-                >Confirm Password</label
+              >Confirm Password</label
               >
               <input
-                type="text"
+                type="password"
+                id="confirmpassword"
                 placeholder="Enter your confirm password"
                 class="box"
               />
@@ -103,7 +118,7 @@
 
           <div class="form_input-group">
             <div class="button-submit">
-            <button type="submit" class = "btn">Register</button>
+            <button type="submit" id = "button " class = "btn">Register</button>
           </div>
         </div>
         <div class="div">
@@ -115,5 +130,29 @@
         </form>
       </div>
     </div>
+    <script>
+      document.getElementById("button").addEventListener("click", function(event) {
+        event.preventDefault();
+  
+        var password = document.getElementById("password").value;
+        var containsUppercase = /[A-Z]/.test(password);
+        var containsNumber = /\d/.test(password);
+  
+        if (!containsUppercase || !containsNumber) {
+          alert("Password should contain at least one uppercase letter and one number.");
+        }
+      });
+  
+      document.getElementById("button").addEventListener("click", function(event) {
+        event.preventDefault();
+  
+        var email = document.getElementById("email").value;
+        var containsNumber = /\d/.test(email);
+  
+        if (!containsNumber) {
+          alert("Email should contain at least one number.");
+        }
+      });
+    </script>
   </body>
 </html>
