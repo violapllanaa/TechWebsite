@@ -30,9 +30,6 @@
 body{
   background-image: url(contanier.jpg);
   background-position: center;
-  /* background-size: cover; */
-  /* width: 100%;
-  height: 100vh; */
 }
 .registerform {
   position: absolute;
@@ -58,7 +55,6 @@ border: 2px solid white;
   margin-top: 13px;
   position: relative;
 
-  /* border: 1px solid white; */
 
 }
 .box{
@@ -76,13 +72,13 @@ input::placeholder{
   opacity: 0.5;
 }
 .button-submit {
-  width: 300px;
+  width: 500px;
   /* border: 1px solid red; */
   height: 80px;
   align-items: center;
   display: flex;
   justify-content: center;
-
+  /* border: 1px solid white; */
 }
 .btn {
   padding: 8px;
@@ -95,19 +91,17 @@ input::placeholder{
   color: white;
   align-items: center;
   justify-content: center;
+  /* border: 1px solid white; */
 
 }
-
-
-
-
 .div {
-  width: 230px;
+  width: 400px;
   height: 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin-bottom: 80px;
+  /* border: 1px solid white; */
 }
 .div p{
   color: white;
