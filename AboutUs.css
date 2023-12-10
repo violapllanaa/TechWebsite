@@ -6,6 +6,7 @@
   color: white;
 }
 
+
 .contanier{
     margin: 0;
    padding: 0;
@@ -49,12 +50,14 @@
   }
   
   .header{
-   width: 85%;
-   margin: auto;
-   padding: 35px 0;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
   }
   .header a{
   list-style: none;
@@ -70,7 +73,7 @@
    content:'';
    height: 3px;
    width: 0%;
-   background: red;
+   background: rgb(0, 85, 255);
    position: absolute;
    left: 0;
    bottom: -10px;
