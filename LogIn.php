@@ -51,7 +51,7 @@
             <div class="div2">
             <p>Don't have an account?</p>
             <div class="registerForm">
-              <a href="./RegisterForm.html">Register now</a>
+              <a href="RegisterForm.php">Register now</a>
             </div>
           </div>
           </div>

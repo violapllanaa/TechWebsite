@@ -10,10 +10,10 @@
   <div class="contanier">
     <div class="header">
       <div class="menu">
-          <a class="menu-link" href="./index.html">Home</a>
-          <a class="menu-link" href="Laptops.html">Laptops</a>
-          <a class="menu-link" href="Desktops.html">Desktops</a>
-          <a class="menu-link" href="Phones.html">Phones</a>
+          <a class="menu-link" href="./index.php">Home</a>
+          <a class="menu-link" href="Laptops.php">Laptops</a>
+          <a class="menu-link" href="Desktops.php">Desktops</a>
+          <a class="menu-link" href="Phones.php">Phones</a>
       </div>
       <div class="title">
           <h1><span class="tech">Tech</span> Website</h1>
@@ -21,7 +21,7 @@
       <div class="search-box">
   
           <input type="text" class="text" placeholder="search"> </p>
-          <button class="logIn_btn"><a href="./LogIn.html" alt="login">Log in</a></button>
+          <button class="logIn_btn"><a href="./LogIn.php" alt="login">Log in</a></button>
       </div>
     </div>
     <div class="center-text">

@@ -11,10 +11,10 @@
     <div class="contanier">
       <div class="header">
         <div class="menu">
-          <a class="menu-link" href="index.html">Home</a>
-          <a class="menu-link" href="AboutUs.html">About</a>
-          <a class="menu-link" href="Contact.html">Contact</a>
-           <a class="menu-link" href="Products.html">Products</a>
+          <a class="menu-link" href="index.php">Home</a>
+          <a class="menu-link" href="AboutUs.php">About</a>
+          <a class="menu-link" href="Contact.php">Contact</a>
+           <a class="menu-link" href="Products.php">Products</a>
           </div>
            <div class="title">
            <h1><span class="tech">Tech</span> Website</h1>
@@ -22,7 +22,7 @@
            <div class="search-box">
      
           <input type="text" class="textS" placeholder="search"> </p>
-           <button class="logIn_btn"><a href="./LogIn.html" alt="login">Log in</a></button>
+           <button class="logIn_btn"><a href="./LogIn.php" alt="login">Log in</a></button>
              
          </div>
         </div>

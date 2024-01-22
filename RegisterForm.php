@@ -125,50 +125,37 @@
             <div class="div2">
             <p>Already have an account ?</p>
             <div class="registerForm">
-              <a href="./LogIn.html">Log In </a>
+              <a href="./LogIn.php">Log In </a>
             </div>
           </div>
           </div>
         </form>
       </div>
     </div>
-    <script>
-      function validateForm() {
-        var firstname = document.forms["forms"]["firstname"].value;
-        var lastname = document.forms["forms"]["lastname"].value;
-        var birthday = document.forms["forms"]["birthday"].value;
-        var gender = document.forms["forms"]["gender"].value;
-        var email = document.forms["forms"]["email"].value;
-        var phonenumber = document.forms["phonenumber"]["firstname"].value;
-        var password = document.forms["forms"]["password"].value;
-        var confirmpassword = document.forms["forms"]["confirmpassword"].value;
+<script>
+  function validateForm(){
+    let nameInput = document.getElementById('firstname');
+    let nameError = document.getElementById('nameError');
+    let emailInput = document.getElementById('email');
+    let emailError = document.getElementById('emailError');
+    let errorMessages = document.getElementById('errorMessages');
 
-        if (firstname == null || firstname == "") {
-          alert("Firstname cannot be blank");
-          return false;
-        } else if (lastname == null || lastname == "") {
-          alert("Lastname  cannot be blank");
-          return false;
-        } else if (birthday == null || birthday == "") {
-          alert("Birthday cannot be blank");
-          return false;
-        } else if (gender == null || gender == "") {
-          alert("gender cannot be blank");
-          return false;
-        } else if (email == null || email == "") {
-          alert("Email cannot be blank");
-          return false;
-        } else if (phonenumber == null || phonenumber == "") {
-          alert("Phone Number cannot be blank");
-          return false;
-        } else if (password == null || password == ""){
-          alert("Password cannot be blank");
-          return false;
-        } else if (confirmpassword == null || confirmpassword == ""){
-          alert("Confirm password cannot be blank");
-          return false;
-        }
-      }
-    </script>
+    nameError.innerText = '';
+    emailError.innerText = '';
+    errorMessages.innerText = '';
+
+    if (!nameRegex.test(nameInput.value)) {
+        nameError.innerText = 'Invalid name';
+        return;
+    }
+    if (!emailRegex.test(emailInput.value)) {
+        emailError.innerText = 'Invalid email';
+        return;
+    }
+
+    errorMessages.innerText = 'Form submitted successfully!';
+}
+
+</script>
   </body>
 </html>

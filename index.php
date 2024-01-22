@@ -13,10 +13,10 @@
     <div class="contanier">
     <div class="header">
    <div class="menu">
-     <a class="menu-link" href="./index.html">Home</a>
-     <a class="menu-link" href="AboutUs.html">About</a>
-     <a class="menu-link" href="Contact.html">Contact</a>
-      <a class="menu-link" href="Products.html">Products</a>
+     <a class="menu-link" href="./index.php">Home</a>
+     <a class="menu-link" href="AboutUs.php">About</a>
+     <a class="menu-link" href="Contact.php">Contact</a>
+      <a class="menu-link" href="Products.php">Products</a>
      </div>
       <div class="title">
       <h1><span class="tech">Tech</span> Website</h1>
@@ -24,7 +24,7 @@
       <div class="search-box">
 
      <input type="text" class="text" placeholder="search"> </p>
-      <button class="logIn_btn"><a href="./LogIn.html" alt="login">Log in</a></button>
+      <button class="logIn_btn"><a href="./LogIn.php" alt="login">Log in</a></button>
         
     </div>
           <div class="icons"></div>
@@ -33,7 +33,7 @@
             <div class="paragraph_main">
                 <h1>The future is now..</h1>
                 <h3>Check our latest products</h3>
-                <a href="products.html" class="button">Shop now</a>
+                <a href="products.php" class="button">Shop now</a>
             </div>
             <div class="paragraph_img">
             </div>

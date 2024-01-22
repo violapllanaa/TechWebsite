@@ -11,7 +11,7 @@
   position: relative;
 }
 body {
-  background-image: url(contanier.jpg);
+  background-image: url(./img/contanier.jpg);
   background-position: center;
 }
 .loginForm {
