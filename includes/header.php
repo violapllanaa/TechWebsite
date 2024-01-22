@@ -72,7 +72,7 @@
   border-radius: 4px;
   border: 1px solid #bcd0e5;
   background: #fff;
-  background-image: url("search.png");
+  background-image: url("./img/search.png");
   background-size: 20px;
   background-position: 8px 50%;
   padding-left: 30px;

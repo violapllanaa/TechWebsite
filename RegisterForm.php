@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register Now</title>
-    <script defer src="index.js"></script>
     <link rel="stylesheet" href="./css/RegisterForm.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -121,8 +120,8 @@
               <button type="submit" id="button " class="btn">Register</button>
             </div>
           </div>
-          <div class="div">
-            <div class="div2">
+          <div class="main">
+            <div class="main_input">
             <p>Already have an account ?</p>
             <div class="registerForm">
               <a href="./LogIn.php">Log In </a>
