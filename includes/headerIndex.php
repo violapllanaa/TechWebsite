@@ -119,9 +119,9 @@
   <div class="header">
         <div class="menu">
           <a class="menu-link" href="index.php">Home</a>
-          <a class="menu-link" href="Laptops.php">Laptops</a>
-          <a class="menu-link" href="Desktops.php">Desktops</a>
-          <a class="menu-link" href="Phones.php">Phones</a>
+          <a class="menu-link" href="AboutUs.php">About</a>
+          <a class="menu-link" href="Products.php">Products</a>
+          <a class="menu-link" href="ContactUs.php">Contact</a>
       </div>
       <div class="title">
           <h1><span class="tech">Tech</span> Website</h1>

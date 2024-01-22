@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register form</title>
+    <title>Register Now</title>
     <script defer src="index.js"></script>
     <link rel="stylesheet" href="./css/RegisterForm.css" />
     <link
