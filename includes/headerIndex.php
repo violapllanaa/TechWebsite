@@ -8,13 +8,13 @@
         .header {
   position: fixed;
   background-color: #fff;
-  top: 0;
+  top:0;
   left: 0;
-  width: 100%;
-  height: 130px;
-  padding: 20px 10%;
+ height: 130px;
+ width: 100%;
+  padding: 20px 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content:space-around;
   align-items: center;
   z-index: 9999;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
@@ -59,7 +59,7 @@
   color: rgb(0, 85, 255);
 }
 .menu {
-  width: 400px;
+  width: 500px;
   height: 50px;
   display: flex;
   justify-content: space-between;
@@ -67,25 +67,35 @@
 }
 
 .text {
-  width: 190px;
+  width: 160px;
   height: 26px;
   border-radius: 4px;
-  border: 1px solid #bcd0e5;
   background: #fff;
   background-image: url("search.png");
   background-size: 20px;
   background-position: 8px 50%;
   padding-left: 30px;
   background-repeat: no-repeat;
+  transition: border-color 0.2s ease;
+  display: flex;
+ text-align: start;
+  align-items: first baseline;
+
+
+}
+
+.text:hover {
+  border-color: #4a90e2; 
 }
 .search-box {
   position: relative;
-
-  width: 370px;
+  width: 340px;
   height: 90px;
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  border: 1px solid red;
+  
 }
 .search-box input {
   width: 150px;
@@ -119,6 +129,7 @@
   <div class="header">
         <div class="menu">
           <a class="menu-link" href="index.php">Home</a>
+          <a class = "menu-link" href="./News.php">News</a>
           <a class="menu-link" href="AboutUs.php">About</a>
           <a class="menu-link" href="Products.php">Products</a>
           <a class="menu-link" href="ContactUs.php">Contact</a>
@@ -128,7 +139,7 @@
       </div>
       <div class="search-box">
   
-          <input type="text" class="text" placeholder="search"> </p>
+          <input type="text" class="text" placeholder="Search for product"> </p>
           <button class="logIn_btn"><a href="./LogIn.php" alt="login">Log in</a></button>
        </div>
       <div class="icons"></div>
