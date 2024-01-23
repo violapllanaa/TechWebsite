@@ -22,7 +22,7 @@
             </div>
             <div class="paragraph_img">
             </div>
-            <div>1234</div>
+          
         </div>
        
         <?php
