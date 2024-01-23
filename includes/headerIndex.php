@@ -139,8 +139,8 @@
       </div>
       <div class="search-box">
   
-          <input type="text" class="text" placeholder="Search for product"> </p>
-          <button class="logIn_btn"><a href="./LogIn.php" alt="login">Log in</a></button>
+          <button class="logIn_btn"><a href="./SignUp.php" alt="signup">SIGN UP</a></button>
+          <button class="logIn_btn"><a href="./LogIn.php" alt="login">LOG IN</a></button>
        </div>
       <div class="icons"></div>
     </div>
