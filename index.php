@@ -22,6 +22,7 @@
             </div>
             <div class="paragraph_img">
             </div>
+            <div>12</div>
         </div>
        
         <?php
