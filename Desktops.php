@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desktops</title>
+  <title>Tech Website- Desktops</title>
   <link rel="stylesheet" type="text/css" href="./css/Desktops.css">
 </head>
 <body>

@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Contact Us</title>
+  <title>Tech Website- Contact Us</title>
   <link rel="stylesheet" href="./css/Contact.css">
 </head>
 <body>

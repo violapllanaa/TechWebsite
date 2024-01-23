@@ -87,10 +87,10 @@ a:hover {
     <div class="footer-column">
       <h4>Online shop</h4>
       <ul>
-        <li><a href="#">Watch</a></li>
-        <li><a href="#">Bag</a></li>
-        <li><a href="#">Shoes</a></li>
-        <li><a href="#">Dress</a></li>
+        <li><a href="#">Desktops</a></li>
+        <li><a href="#">Laptops</a></li>
+        <li><a href="#">Tablets</a></li>
+        <li><a href="#">Phones</a></li>
       </ul>
     </div>
     <div class="footer-column">
