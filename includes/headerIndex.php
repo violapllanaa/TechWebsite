@@ -80,14 +80,12 @@
   display: flex;
  text-align: start;
   align-items: first baseline;
-
-
 }
 
 .text:hover {
   border-color: #4a90e2; 
 }
-.search-box {
+.buttons {
   position: relative;
   width: 340px;
   height: 90px;
@@ -96,9 +94,6 @@
   justify-content: space-around;
   border: 1px solid red;
   
-}
-.search-box input {
-  width: 150px;
 }
 .logIn_btn {
   width: 150px;
@@ -113,7 +108,19 @@
   list-style: none;
   color: white;
 }
+.signup_btn {
+  width: 150px;
+  height: 40px;
+  background-color: rgb(0, 85, 255);
+  border: 1px solid rgb(0, 85, 255);
 
+  border-radius: 10px;
+}
+.signup_btn a {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
 .menu a {
   text-decoration: none;
   color: #000;
@@ -137,9 +144,8 @@
       <div class="title">
           <h1><span class="tech">Tech</span> Website</h1>
       </div>
-      <div class="search-box">
-  
-          <button class="logIn_btn"><a href="./SignUp.php" alt="signup">SIGN UP</a></button>
+      <div class="Buttons">
+          <button class="signup_btn"><a href="./SignUp.php" alt="signup">SIGN UP</a></button>
           <button class="logIn_btn"><a href="./LogIn.php" alt="login">LOG IN</a></button>
        </div>
       <div class="icons"></div>
