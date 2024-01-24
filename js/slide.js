@@ -11,7 +11,7 @@ function cSlide(n) {
 
 function showSlides(n) {
   var i;
-  var slides = document.getElementsByClassName("weworkSlide");
+  var slides = document.getElementsByClassName("Slider-fade");
   var dots = document.getElementsByClassName("pika");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
