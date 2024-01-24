@@ -52,7 +52,7 @@ body {
   margin-top: 10px;
 }
 
-.login_form button {
+.login_form .button {
   width: 150px;
   padding: 10px;
   background-color: #4a5568;
@@ -72,7 +72,7 @@ body {
   margin:10px 10px 10px 10px;
 }
 
-.login_form button:hover {
+.login_form .button:hover {
   background-color: #2d3748;
 }
 
