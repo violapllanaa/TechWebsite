@@ -139,7 +139,7 @@
           <a class = "menu-link" href="./News.php">News</a>
           <a class="menu-link" href="AboutUs.php">About</a>
           <a class="menu-link" href="Products.php">Products</a>
-          <a class="menu-link" href="ContactUs.php">Contact</a>
+          <a class="menu-link" href="Contact.php">Contact</a>
       </div>
       <div class="title">
           <h1><span class="tech">Tech</span> Website</h1>

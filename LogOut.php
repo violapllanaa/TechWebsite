@@ -1,5 +1,7 @@
-<?php
+<?php 
+
 session_start();
+
 session_destroy();
-header("location:LogIn.php");
-?>
+
+header('Location: index.php');
