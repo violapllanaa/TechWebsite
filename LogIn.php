@@ -15,7 +15,7 @@
   <form class="form">
     <div class="container ">
       <div class="login_form">
-        <h1 >Login</h1>
+        <h1 >LOG IN</h1>
         <div class="relative">
           <label for="full-name" class="leading">Email Address</label>
           <input type="email" id="email" name="email" class="email">
@@ -24,12 +24,16 @@
           <label for="password" class="leading">Password</label>
           <input type="password" id="password" name="password" class="email">
           <div class="btn">
-          <button class="">login</button>
+          <button class="">Login</button>
           </div>
           <p class="forgetPsw">Forget password! Please contact adminstration.We care about your data</p>
+       
         </div>
+       
       </div>
+
     </div>
+    <p>If you don't have an account. <a href="signup.php" >Sign up </a></p>
   </form>
 </body>
 </html>

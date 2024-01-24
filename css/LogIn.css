@@ -1,5 +1,12 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
 body {
-  font-family: 'Your Font', sans-serif; 
+  padding-top: 130px;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
   background-color: lightslategray;
 }
 
@@ -7,7 +14,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+
+  width: 100%;
+  margin: auto;
+  font-family: sans-serif;
 }
 
 .login_form {
@@ -69,4 +79,7 @@ body {
 .login_form .forgetPsw {
   font-size: 14px;
   color: #718096;
+}
+p a{
+  color: red;
 }
