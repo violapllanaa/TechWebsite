@@ -19,6 +19,10 @@ if ($loginCheck->isLogin()) {
     <link rel="stylesheet" type="text/css" href="css/Signup.css">
 </head>
 <body>
+
+<div class="header">
+        <a href="index.php"><img src="img/Logo2.png" width="70px" height="70px"></a>
+
         <?php if(isset($_SESSION['name'])): ?>
         <p>Welcome, <?php echo $_SESSION['name'];?>
         <?php if($_SESSION['user_type'] == "admin" ): ?>
@@ -28,6 +32,7 @@ if ($loginCheck->isLogin()) {
     <?php else: ?>
         <p><a href="LogIn.php">Login</a> / <a href="SignUp.php">Sign up</a></p>
     <?php endif; ?>
+    </div>
     </div>
     <div class="content">
         <div class="maincontainer">

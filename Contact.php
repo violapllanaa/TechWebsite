@@ -13,6 +13,10 @@ session_start();
 </head>
 <body>
   <div class="content">
+
+  <div class="header">
+        <a href="index.php"><img src="img/Logo2.png" width="70px" height="70px"></a>
+
     <?php if (isset($_SESSION['name'])): ?>
       <p>Welcome,
         <?php echo $_SESSION['name']; ?>
@@ -25,6 +29,7 @@ session_start();
       <p><a href="LogIn.php">Login</a> / <a href="SignUp.php">Sign up</a></p>
     <?php endif; ?>
     </div >
+  
   <div class="maincontainer">
     <h1 style="text-align: center;">Contact Us</h1>
     <p style="text-align:center;color:red;">
