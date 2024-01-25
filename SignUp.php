@@ -12,16 +12,13 @@ if ($loginCheck->isLogin()) {
 ?>
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>TechWebsite- Sign up</title>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="css/Signup.css">
 </head>
-
 <body>
-
         <?php if(isset($_SESSION['name'])): ?>
         <p>Welcome, <?php echo $_SESSION['name'];?>
         <?php if($_SESSION['user_type'] == "admin" ): ?>
@@ -31,7 +28,6 @@ if ($loginCheck->isLogin()) {
     <?php else: ?>
         <p><a href="LogIn.php">Login</a> / <a href="SignUp.php">Sign up</a></p>
     <?php endif; ?>
-
     </div>
     <div class="content">
         <div class="maincontainer">
@@ -57,7 +53,4 @@ if ($loginCheck->isLogin()) {
                     <input id="button" type="submit" name="submit" value="Sign Up" >
                 </form>
             </div>
-
-
-
         </div>

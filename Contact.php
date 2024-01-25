@@ -8,7 +8,8 @@ session_start();
   <title>TechWebsite- Contact Us</title>
   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" type="text/css" href="css/Contact.css">
+  <link rel="stylesheet" href="css/Contact.css">
+
 </head>
 <body>
   <div class="content">
@@ -23,7 +24,7 @@ session_start();
     <?php else: ?>
       <p><a href="LogIn.php">Login</a> / <a href="SignUp.php">Sign up</a></p>
     <?php endif; ?>
-  </div>
+    </div >
   <div class="maincontainer">
     <h1 style="text-align: center;">Contact Us</h1>
     <p style="text-align:center;color:red;">
@@ -66,6 +67,6 @@ session_start();
       </form>
     </div>
   </div>
-  </div>
+
 </body>
 </html>
