@@ -52,7 +52,8 @@ body {
     flex-direction: column;
     /* justify-content: center; */
     min-height: 55vh;
-    width: 80%;
+    width: 60%;
+    height: 500px;
     border-radius: 20px;
     margin: auto;
     margin-top: 75px;

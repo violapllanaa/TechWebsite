@@ -8,7 +8,6 @@ if ($loginCheck->isLogin()) {
     exit();
 
 }
-
 ?>
 <!DOCTYPE html>
 <html>

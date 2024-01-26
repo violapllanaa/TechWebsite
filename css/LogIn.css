@@ -3,11 +3,17 @@ h2 {font-family: 'Poppins', sans-serif; font-weight: 500;}
 p {font-family: 'Poppins', sans-serif; font-weight: 400;}
 a {font-family: 'Poppins', sans-serif;font-weight: 400;}
 label {font-family: 'Poppins', sans-serif;}
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
 
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  width: 100%;
+  height: auto;
  padding: 0px;
   margin: 0px;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -26,7 +32,8 @@ body {
   flex-direction: column;
   /* justify-content: center; */
   min-height: 55vh;
-  width: 80%;
+  width: 55%;
+  height: 450px;
   border-radius: 20px;
   margin: auto;
   margin-top: 75px;
@@ -41,6 +48,10 @@ body {
 .forma {
   margin: auto;
   width: 50%;
+
+}
+.forma p{
+  margin-top: 30px;
 }
 
 
