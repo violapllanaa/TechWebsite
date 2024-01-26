@@ -2,13 +2,18 @@
 require 'includes/class-autoload.inc.php';
 session_start();
 
-$loginCheck = new LoginCheck();
-if ($loginCheck->isLogin()) {
-    header("Location: /");
-    exit();
+ // Adjust the path accordingly
 
+$loginCheck = new LoginCheck();
+
+if ($loginCheck->isLogin()) {
+    // User is already logged in, redirect them to the desired page
+    header("Location: LogIn.php"); // Adjust the destination page accordingly
+    exit();
 }
+require_once 'classes/LoginCheck.class.php';
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
