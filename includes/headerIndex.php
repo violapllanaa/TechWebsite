@@ -140,9 +140,10 @@
           <a class="menu-link" href="AboutUs.php">About</a>
           <a class="menu-link" href="Products.php">Products</a>
           <a class="menu-link" href="Contact.php">Contact</a>
+          <a href="admin_panel/index.php" class="button">Dashboard</a>
       </div>
       <div class="title">
-          <h1><span class="tech">Tech</span> Website</h1>
+          <h1><img src="./admin_panel/assets/images/Logo2.png" width="80" height="80" alt="admin"></h1>
       </div>
       <div class="Buttons">
           <button class="signup_btn"><a href="./SignUp.php" alt="signup">SIGN UP</a></button>
