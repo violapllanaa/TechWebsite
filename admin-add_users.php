@@ -1,4 +1,4 @@
-<?php require 'includes/class-autoload.inc.php';
+<?php require 'class-autoload.inc.php';
 session_start();
 
 $adminCheck = new AdminCheck();

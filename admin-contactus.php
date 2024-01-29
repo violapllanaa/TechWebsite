@@ -4,29 +4,28 @@ session_start();
 
 $adminCheck = new AdminCheck();
 if (!$adminCheck->isAdmin()) {
-	header('location: ../Login.php');
+	header('location: ../LogIn.php');
 }
 
-$usersClass = new Users();
-$usersClass->fetchUsers();
+$contactClass = new ContactAdmin();
+$contactClass->fetchContacts();
 ?>
 <!DOCTYPE html>
 <html>
 
 <head>
-<title>TechWebsite- Admin Panel</title>
+<title>ContactUs- Admin Panel</title>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="style.css">
-  
-		<style>table, td {
-  border: 1px solid black;
-}</style>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
 </head>
-
 <body>
-
 <div class="content">
+
+<div class="header">
+<a href="index.php"><img src="img/Logo2.png" width="70px" height="70px"></a>
+        <a href="index.php">Home</a>
         <?php if(isset($_SESSION['name'])): ?>
         <p>Welcome, <?php echo $_SESSION['name'];?>
         <?php if($_SESSION['user_type'] == "admin" ): ?>
@@ -39,14 +38,12 @@ $usersClass->fetchUsers();
 
     </div>
     <div class="maincontainer">
-        <h1 style="text-align: center">Manage Users</h1>
-				<p style="text-align:center;"><a href="admin-add_users.php">Add a new user</a></p>
-
+        <h1 style="text-align: center">Manage Contact Us</h1>
 				<div style="margin: 0 auto;">
-										<?php $usersClass->echoUsers(); ?>
+										<?php $contactClass->echoContacts(); ?>
 			</div>
 
 
 </div>
     </div>
-  
+    <?php include 'includes/footer.php'?>
