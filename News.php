@@ -44,6 +44,9 @@
 
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/slide.js"></script>
-
+</div>
+<?php
+   include './includes/footer.php';
+?>
 </body>
 </html>
