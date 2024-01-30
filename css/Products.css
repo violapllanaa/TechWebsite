@@ -93,3 +93,7 @@ padding: 50px 20px;
 .p1 img:hover{
   transform: scale(0.9);
 }
+
+.p1 p {
+  padding right: 20px;
+}
