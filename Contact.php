@@ -1,5 +1,5 @@
 <?php
-require 'class-autoload.inc.php';
+require 'includes/class-autoload.inc.php';
 session_start();
 ?>
 <!DOCTYPE html>

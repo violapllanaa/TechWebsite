@@ -2,7 +2,7 @@
 class DBConnection
 {
     private $host = 'localhost';
-    private $dbname = 'user';
+    private $dbname = 'techwebsitedb';
     private $username = 'root';
     private $password = '';
 

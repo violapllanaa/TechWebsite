@@ -1,58 +1,59 @@
 <?php
+
 class Signup {
-    private $name;
-    private $email;
-    private $password;
-    private $user_type;
-    private $connection;
+  private $name;
+  private $email;
+  private $password;
+  private $user_type;
+  private $connection;
+  private $sql;
+  private $query;
+  private $user;
+  private $sqlCheck;
+  private $queryCheck;
+  private $userCheck;
+  private $userError;
 
-    public function __construct($name, $email, $password){
-        $this->name = $name;
-        $this->email = $email;
-        $this->password = $password;
-        $this->user_type = 'normal';
-        $this->connection = new DBConnection();
+  public function __construct($name, $email, $password){
+    $this->name = $name;
+    $this->email = $email;
+    $this->password = $password;
+  }
+
+  public function checkEmailDatabse(){
+    $this->connection = new DBConnection();
+    //$this->userError = "";
+    $this->sqlCheck = 'SELECT email FROM users WHERE email = :email';
+    $this->queryCheck = $this->connection->getConnection()->prepare($this->sqlCheck);
+    $this->queryCheck->bindParam(':email', $this->email);
+    $this->queryCheck->execute();
+    $this->user = $this->queryCheck->fetch();
+
+    if($this->user['email'] == $this->email){
+      $this->userError = "User already exists";
+      header("Location: ../SignUp.php?submit=exists");
+      return true;
     }
+    return false;
+  }
 
-    public function checkEmailDatabase(){
-        try {
-            $sqlCheck = 'SELECT email FROM users WHERE email = :email';
-            $queryCheck = $this->connection->getConnection()->prepare($sqlCheck);
-            $queryCheck->bindParam(':email', $this->email);
-            $queryCheck->execute();
-            $user = $queryCheck->fetch();
+  public function doSignup(){
+    $this->password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+    $this->user_type = 'normal';
 
-            if ($user && $user['email'] == $this->email) {
-                return "User already exists";
-            }
+    $this->connection = new DBConnection();
 
-            return false;
-        } catch (PDOException $e) {
-            return "Error checking email: " . $e->getMessage();
-        }
-    }
+      $this->sql = 'INSERT INTO users (name, email, password, user_type) VALUES (:name, :email, :password, :user_type)';
+      $this->query = $this->connection->getConnection()->prepare($this->sql);
+      $this->query->bindParam('name', $this->name);
+      $this->query->bindParam('email', $this->email);
+      $this->query->bindParam('password', $this->password);
+      $this->query->bindParam('user_type', $this->user_type);
 
-    public function doSignup(){
-        try {
-            $hashedPassword = password_hash($this->password, PASSWORD_BCRYPT);
-
-            $sql = 'INSERT INTO users (name, email, password, user_type) VALUES (:name, :email, :password, :user_type)';
-            $query = $this->connection->getConnection()->prepare($sql);
-            $query->bindParam(':name', $this->name);
-            $query->bindParam(':email', $this->email);
-            $query->bindParam(':password', $hashedPassword);
-            $query->bindParam(':user_type', $this->user_type);
-
-            if ($query->execute()) {
-                return "Signup successful";
-            } else {
-                return "Signup failed";
-            }
-        } catch (PDOException $e) {
-            return "Error during signup: " . $e->getMessage();
-        }
-    }
+      if($this->query->execute()) {
+          header("Location: ../SignUp.php?submit=success");
+      } else {
+          header("Location: ../SignUp.php?submit=failed");
+      }
+  }
 }
-
-
-?>

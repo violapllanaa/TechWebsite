@@ -1,5 +1,4 @@
 <?php
-
 class SignupValidation {
   private $nameErr;
   private $emailErr;

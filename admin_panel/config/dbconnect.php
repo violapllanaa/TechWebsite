@@ -3,7 +3,7 @@
 $server = "localhost";
 $user = "root";
 $password = "";
-$db = "admindb";
+$db = "techwebsitedb";
 
 $conn = mysqli_connect($server,$user,$password,$db);
 

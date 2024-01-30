@@ -6,7 +6,6 @@ if (!isset($_POST['submit'])) {
     header("Location:/");
     exit();
 }
-
 $goback = '<br/><a href="javascript:history.back()">Go Back</a>';
 $errorFound = "Please fix the following:<br>";
 
