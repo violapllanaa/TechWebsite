@@ -18,7 +18,6 @@ $usersClass->fetchUsers();
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="style.css">
-  
 		<style>table, td {
   border: 1px solid black;
 }</style>
@@ -39,13 +38,20 @@ $usersClass->fetchUsers();
 
     </div>
     <div class="maincontainer">
-        <h1 style="text-align: center">Manage Users</h1>
-				<p style="text-align:center;"><a href="admin-add_users.php">Add a new user</a></p>
-
-				<div style="margin: 0 auto;">
-										<?php $usersClass->echoUsers(); ?>
+        <h1 style="text-align: center">Add Users</h1>
+        <div style="margin: 0 auto;">
+          <form action="<?php $usersClass->addUsers();?>" method="post">
+              <input type="text" name="name" placeholder="Enter your name"><br>
+              <input type="text" name="email" placeholder="Enter your email"><br>
+              <input type="password" name="password" placeholder="Enter your password"><br>
+              <label>User type:</label><br>
+              <input type="radio" id="user_type" name="user_type" value="normal">
+              <label for="normal">Normal</label><br>
+              <input type="radio" id="user_type" name="user_type" value="admin">
+              <label for="admin">Admin</label><br>
+              <input id="button" type="submit" name="submit" value="Submit">
+          </form>
 			</div>
-
 
 </div>
     </div>
