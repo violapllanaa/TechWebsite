@@ -208,26 +208,22 @@ INSERT INTO `prices` (`quantity_id`, `quantity_name`) VALUES
 --
 
 CREATE TABLE `users` (
-  `user_id` int(11) NOT NULL,
-  `first_name` varchar(200) NOT NULL,
-  `last_name` varchar(255) NOT NULL,
+  `id` int(11) NOT NULL,
+  `name` varchar(200) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(150) NOT NULL,
-  `contact_no` varchar(10) NOT NULL,
-  `registered_at` date NOT NULL DEFAULT current_timestamp(),
-  `isAdmin` int(11) NOT NULL DEFAULT 0,
-  `user_address` varchar(255) NOT NULL
+  `user_tyoe` varchar(50) NOT NULL DEFAULT 0,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `first_name`, `last_name`, `email`, `password`, `contact_no`, `registered_at`, `isAdmin`, `user_address`) VALUES
-(1, 'Admin', 'Admin', 'admin@gmail.com', '$2y$10$j9OXXIYS0CG5AYuks62YMeDvuIpo2hZEN4CqfJfujt1yPMnoUq5C6', '9810283472', '2022-04-10', 1, 'newroad'),
-(2, 'Test ', 'Firstuser', 'test@gmail.com', '$2y$10$DJOdhZy1InHTKQO6whfyJexVTZCDTlmIYGCXQiPTv7l82AdC9bWHO', '980098322', '2022-04-10', 0, 'matepani-12');
-(2, 'Admin ', 'Admin', 'violapllana@gmail.com', '$2y$10$DJOdhZy1InHTKQO6whfyJexVTZCDTlmIYGCXQiPTv7l82AdC9bWHO', '980098312', '2022-04-20', 0, '12345678');
--- --------------------------------------------------------
+INSERT INTO `users` (`id`, `name`, `email`, `password`,`user_type`) VALUES
+(1, 'Admin`, 'admin@gmail.com', '$2y$10$j9OXXIYS0CG5AYuks62YMeDvuIpo2hZEN4CqfJfujt1yPMnoUq5C6',`user`),
+(2, `User`, 'test@gmail.com', '$2y$10$DJOdhZy1InHTKQO6whfyJexVTZCDTlmIYGCXQiPTv7l82AdC9bWHO',`user`);
+(2, `Viola`,'violapllana@gmail.com', '$2y$10$DJOdhZy1InHTKQO6whfyJexVTZCDTlmIYGCXQiPTv7l82AdC9bWHO',`admin`);
+-- ----------------------------------------------------------------------------------------------------------
 
 --
 -- Indexes for dumped tables

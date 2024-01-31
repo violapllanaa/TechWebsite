@@ -5,12 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Website</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css" 
-    href="https://cdnjs.cloudflare.com
-    /ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
 </head>
-<body>
-    <div class="contanier">
+<body> 
     <?php
    include './includes/headerIndex.php';
 ?>
@@ -28,7 +25,7 @@
         <?php
    include './includes/footer.php';
 ?>
-</div>
+
  
 </body>
 </html>

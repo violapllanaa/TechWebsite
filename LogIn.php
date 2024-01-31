@@ -34,7 +34,7 @@ if ($loginCheck->isLogin()) {
     </div>
     </div>
 <div class="container">
-    <h1 style="text-align: center;">Login:</h1>
+    <h1 style="text-align: center;">Login</h1>
     <p style="text-align:center;color:red;">
       <?php require 'includes/loginerrors.inc.php'; ?>
     </p>
@@ -49,7 +49,7 @@ if ($loginCheck->isLogin()) {
         <br>
         <input id="button" type="submit" name="submit" value="Login">
     </form>
-    <p>If you don't have an account. <a href="signup.php">Sign up here</a></p>
+    <p>If you don't have an account. <a href="SignUp.php">Sign up here</a></p>
     </div>
     </div>
 
