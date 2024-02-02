@@ -4,8 +4,147 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Tech Website- News</title>
-   <link rel="stylesheet" href="css/News.css">
    <script src="js/slide.js" defer></script>
+   <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f5f5f5;
+  }
+  .main {
+  
+    margin-top: 170px;
+  margin-bottom: 100px;
+    max-width: 1200px;
+    width: 95%;
+  }
+  .main h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    margin: 30px;
+  }
+  
+  .slider-wrapper {
+    position: relative;
+    margin-left: 60px;
+    border: 1px solid white;
+    -webkit-font-smoothing: subpixel-antialiased;
+    background-color: #f5f5f5;
+    border-radius:20px ;
+    -webkit-box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.75);
+  }
+  .slider-scrollbar{
+    margin-left: 60px;
+    width: 95%;
+  }
+  
+  .slider-wrapper .slide-button {
+    height: 50px;
+    width: 50px;
+    color: black;
+    background: white;
+    font-size: 2.2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slide-button:hover {
+    background: #444;
+  }
+  
+  .slide-button#prevslide {
+    left: -20px;
+  }
+  
+  .slide-button#nextslide {
+    right: -20px;
+  }
+  
+  .slider-wrapper .image-list {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    overflow-x: auto;
+    gap: 18px;
+    font-size: 0;
+    scrollbar-width: none;
+    margin: 30px;
+  }
+  
+  .slider-wrapper .image-list::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .slider-wrapper .image-list .image-items {
+    width: 325px;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .main .slider-scrollbar {
+    height: 24px;
+    width: 95%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .slider-scrollbar .scrollbar-track {
+    height: 2px;
+    width: 100%;
+    background:#ccc;
+    position: relative;
+    border-radius: 4px;
+  }
+  
+  .slider-scrollbar:hover .scrollbar-track {
+    height: 4px;
+  }
+  
+  .slider-scrollbar .scrollbar-thumb {
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    background: black;
+    border-radius: inherit;
+    cursor: grab;
+  }
+  
+  .slider-scrollbar .scrollbar-thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+  }
+  
+  .slider-scrollbar .scrollbar-thumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+  }
+  
+  
+  @media (max-width: 1023px){
+    .slider-wrapper .slide-button{
+      display: none!important;
+    }
+   </style>
 </head>
 <body>
   <div class="contanier">

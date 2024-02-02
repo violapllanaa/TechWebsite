@@ -130,6 +130,19 @@
   font-weight: 500;
   line-height: normal;
 }
+@media (max-width: 700px){
+.header{
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+.menu-link{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+}
     </style>
 </head>
 <body>

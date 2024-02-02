@@ -4,7 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Website- About Us</title>
-    <link rel="stylesheet" href="./css/AboutUs.css">
+    <style>
+        *{
+	margin:0;
+	padding:0;
+  box-sizing: border-box;
+}
+body {
+  padding-top: 130px;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+.contanier {
+  width: 100%;
+  margin: auto;
+  font-family: sans-serif;
+
+}
+.AboutUsmain img{
+  background-image: url(img\tech.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 800px; 
+  position: absolute;
+}
+
+  .AboutUsmain{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .text{
+    bottom: 250px;
+    color: white;
+    width: 800px;
+    height: 400px;
+    border: 1px solid white;
+  }
+  .text p{
+    bottom: 250px;
+    color: white;
+    position: relative;
+    left: 40px;
+    width:700px ;
+    height: 380px;
+    align-items: center;
+       display: flex;
+  }
+  .text h1{
+    bottom: 250px;
+    color: white;
+    position: relative;
+    width: 700px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+    </style>
 </head>
 <body>
    

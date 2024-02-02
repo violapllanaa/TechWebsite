@@ -13,11 +13,14 @@ a {font-family: 'Poppins', sans-serif;font-weight: 400;}
 label {font-family: 'Poppins', sans-serif;}
 
     body {
-  margin: 0;
+box-sizing: border-box;
   font-family: 'Arial', sans-serif;
 }
 
 .footer {
+  position: relative;
+  bottom:0;
+  left: 0;
   width: 100%;
   height: 250px;
   background-color: #333;
