@@ -13,6 +13,6 @@ function myAutoLoader($classname){
     $path = 'classes/';
   }
   $extension = '.class.php';
-  require_once $path . $classname . $extension;
+  require $path . $classname . $extension;
 
 }
