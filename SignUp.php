@@ -1,12 +1,35 @@
-<?php
-    require 'includes/class-autoload.inc.php';
+<?php 
     session_start();
+    
+    include 'autoload.php';
 
-    $loginCheck = new LoginCheck();
-    if ($loginCheck->isLogin()) {
-    	header("Location: /");
+    $errors = [];
+
+    if(isset($_POST['signup_btn'])) {
+        $email = $_POST['email'];
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $role = $_POST['role'];
+        $user = new Auth($email ,$username, $password, $role);
+        $reg_user_id = $user->register();
+        if($reg_user_id > 0) {
+            $users = new Users();
+            $_user = $users->get($reg_user_id);
+            
+            $_SESSION['email'] = $_user['email'];
+            $_SESSION['username'] = $_user['username'];
+            $_SESSION['is_logged_in'] = true;
+            $_SESSION['is_admin'] = $_user['is_admin'];
+            if($_user['is_admin'] == 0)
+                header("Location: LogIn.php");
+            else
+                header("Location: LogIn.php");
+                $_SESSION['signup_success'] = true;
+        } else {
+            $errors[] = "Please enter valid username(email) and password (8 or more chars)!";
+        }
     }
-
+    
 ?>
 <!DOCTYPE html>
 <html>
@@ -130,30 +153,31 @@ input[type=password] {
 <body>
 
 <div class="header">
-        <a href="index.php"><img src="img/Logo2.png" width="70px" height="70px"></a>
-
-        <?php if(isset($_SESSION['name'])): ?>
-        <p>Welcome, <?php echo $_SESSION['name'];?>
-        <?php if($_SESSION['user_type'] == "admin" ): ?>
-            <a href="admin.php">(Admin Panel)</a>
-        <?php endif; ?>
-        / <a href="LogOut.php">Logout</a></p>
-    <?php else: ?>
-        <p><a href="LogIn.php">Login</a> / <a href="SignUp.php">Sign up</a></p>
-    <?php endif; ?>
-    </div>
+<?php
+                    if(count($errors)) {
+                ?>
+                    <div class="alert alert-danger">
+                        <ul>
+                        <?php foreach($errors as $error): ?>
+                            <li><?= $error ?></li>
+                        <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <?php   
+                    }
+                ?>
     </div>
     <div class="content">
         <div class="maincontainer">
             <h1 style="text-align: center;">Sign up</h1>
             <p style="text-align:center;color:red;">
-                <?php require 'includes/signuperrors.inc.php'; ?>
+   
             </p>
             <div class="forma">
                 <form name="signupForm" action="includes/signup.inc.php" onsubmit="return validateSignup()"
                     method="post">
-                    <label for="name">Enter your name:</label><br>
-                    <input type="text" id="name" name="name" placeholder="Enter your name...">
+                    <label for="username">Enter your username:</label><br>
+                    <input type="text" id="username" name="username" placeholder="Enter your username...">
                     <label for="email">Enter your e-mail:</label><br>
                     <input type="email" id="email" name="email" placeholder="Enter your email...">
                     <br>

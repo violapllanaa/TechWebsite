@@ -1,19 +1,26 @@
-<script>
-function validateForm() {
-  var username = document.forms["forms"]["username"].value;
-  var password = document.forms["forms"]["password"].value;
-  var confirmpassword =
-    document.forms["forms"]["confirmpassword"].value;
 
-  if (username == null || username == "") {
-    alert("Username cannot be blank");
-    return false;
-  } else if (password == null || password == "") {
-    alert("Password cannot be blank");
-    return false;
-  } else if (confirmpassword == null || confirmpassword == "") {
-    alert("Confirm password cannot be blank");
-    return false;
+function validateForm() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  var Error = document.getElementById('Error');
+
+
+  if (username.trim() === "") {
+    Error.innerHTML = "please fill in the username";
+      document.getElementById('username').focus();
+      return false;
   }
+
+  if (password.length < 8) {
+     Error.innerHTML = "the password must be longer than 8 characters";
+      document.getElementById('password').focus();
+      return false;
+  }
+
+  if (!password.match(/[a-zA-Z]/)) {
+    Error.innerHTML = "the password must contain an alphabetic character";
+      document.getElementById('password').focus();
+      return false;
+  }
+   return true;
 }
-</script>

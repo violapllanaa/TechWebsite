@@ -7,10 +7,10 @@
  <!-- nav -->
  <nav  class="navbar navbar-expand-lg navbar-light px-5" style="background-color: #00897b;">
     
-    <a class="navbar-brand ml-5" href="\Projekti-TechWebsite\TechWebsite\index.php">
+    <a class="navbar" href="\Projekti-TechWebsite\TechWebsite\index.php">
         <img src="./assets/images/Logo2.png" width="80" height="80" alt="admin">
     </a>
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
+    <ul class="navbar-nav"></ul>
     
     <div class="user-cart">  
         <?php           

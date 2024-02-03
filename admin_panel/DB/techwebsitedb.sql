@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 31, 2024 at 11:35 PM
+-- Generation Time: Feb 02, 2024 at 11:29 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -77,7 +77,8 @@ CREATE TABLE `contact` (
 INSERT INTO `contact` (`id`, `name`, `email`, `city`, `gender`, `entertext`) VALUES
 (1, 'Viola', 'violapllana11@gmail.com', 'tetova', 'female', 'hello contact'),
 (2, 'Fjolla', 'fjollabeka81@gmail.com', 'tetova', 'female', '.'),
-(3, 'Viola', 'vp68589@ubt-uni.net', 'tetova', 'female', 'kejfhkqe fejgnwr grjngn wrkgnrkjg rkgjnrg rkglrkmg rlkgmlkerg ker ???');
+(3, 'Viola', 'vp68589@ubt-uni.net', 'tetova', 'female', 'kejfhkqe fejgnwr grjngn wrkgnrkjg rkgjnrg rkglrkmg rlkgmlkerg ker ???'),
+(4, 'wd', 'WDWDWD@EFEA.EFF', 'shkupi', 'female', 'FEQFEQ');
 
 -- --------------------------------------------------------
 
@@ -204,22 +205,23 @@ INSERT INTO `review` (`review_id`, `user_id`, `product_id`, `review_desc`) VALUE
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `email` varchar(255) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `username` varchar(255) NOT NULL,
   `password` varchar(150) NOT NULL,
-  `user_type` varchar(11) NOT NULL
+  `is_admin` tinyint(4) NOT NULL DEFAULT 0,
+  `created_in` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `password`, `user_type`) VALUES
-(1, '', 'admin@gmail.com', '$2y$10$j9OXXIYS0CG5AYuks62YMeDvuIpo2hZEN4CqfJfujt1yPMnoUq5C6', '0'),
-(2, '', 'test@gmail.com', '$2y$10$DJOdhZy1InHTKQO6whfyJexVTZCDTlmIYGCXQiPTv7l82AdC9bWHO', '0'),
-(3, '', '', '', ''),
-(4, 'Viola', 'violapllana11@gmail.com', '$2y$10$mwMHZzlIEO2Y64RJSK35tuW7W9uIhqz.zQVTogkdQ7Eb4FN8zP8JG', 'admin'),
-(5, 'Vlera', 'vlerapllana@gmail.com', '$2y$10$HWgGo3g0Eh4ECp/WWV88ReZqU4Qt.zW7s/rOutER2ZeYzcOpAEHEG', 'normal');
+INSERT INTO `users` (`id`, `email`, `username`, `password`, `is_admin`, `created_in`) VALUES
+(1, '', 'admin@gmail.com', '$2y$10$j9OXXIYS0CG5AYuks62YMeDvuIpo2hZEN4CqfJfujt1yPMnoUq5C6', 127, '0000-00-00 00:00:00'),
+(2, '', 'test@gmail.com', '$2y$10$DJOdhZy1InHTKQO6whfyJexVTZCDTlmIYGCXQiPTv7l82AdC9bWHO', 127, '0000-00-00 00:00:00'),
+(3, '', '', '', 127, '0000-00-00 00:00:00'),
+(4, 'Viola', 'violapllana11@gmail.com', '$2y$10$mwMHZzlIEO2Y64RJSK35tuW7W9uIhqz.zQVTogkdQ7Eb4FN8zP8JG', 127, '0000-00-00 00:00:00'),
+(5, 'Vlera', 'vlerapllana@gmail.com', '$2y$10$HWgGo3g0Eh4ECp/WWV88ReZqU4Qt.zW7s/rOutER2ZeYzcOpAEHEG', 127, '0000-00-00 00:00:00');
 
 --
 -- Indexes for dumped tables
@@ -308,7 +310,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `orders`

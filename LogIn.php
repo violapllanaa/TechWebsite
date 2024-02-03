@@ -1,14 +1,34 @@
 <?php
-require 'includes/class-autoload.inc.php';
-
-
-include_once __DIR__ . "../admin_panel/config/dbconnect.php";
-
 session_start();
 
-$loginCheck = new LoginCheck();
-if ($loginCheck->isLogin()) {
-  header("Location: /");
+include 'autoload.php';
+
+
+$errors = [];
+
+if (isset($_POST['login-btn'])) {
+    $username = $_POST['email'];
+    $password = $_POST['password'];
+    $role = $_POST['role'];
+
+    $user = new Auth(null, $username, $password, $role);
+    $login_result = $user->login();
+
+    if ($login_result) {
+        $_SESSION['email'] = $login_result['email'];
+        $_SESSION['is_logged_in'] = true;
+        $_SESSION['is_admin'] = $login_result['is_admin'];
+
+       if ($login_result['is_admin'] == 0) {
+        header("Location: uploads/index.php?email=" . urlencode($login_result['email']));
+            exit(); 
+        } elseif ($login_result['is_admin'] == 1) {
+            header("Location: uploads/index.php?email=" . urlencode($login_result['email']));
+            exit(); 
+        }
+    } else {
+        $errors[] = "Invalid email or password!";
+    }
 }
 
 ?>
@@ -18,6 +38,7 @@ if ($loginCheck->isLogin()) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src = "js/login.js"></script>
   <title>TechWebsite- LOG IN</title>
   <style>
     h1 {
@@ -142,26 +163,24 @@ if ($loginCheck->isLogin()) {
   </style>
 </head>
 <body>
-  <div class="header">
-    <a href="index.php"><img src="img/Logo2.png" width="70px" height="70px"></a>
-    <?php if (isset($_SESSION['name'])): ?>
-      <p>Welcome,
-        <?php echo $_SESSION['name']; ?>
-        <?php if ($_SESSION['user_type'] == "admin"): ?>
-          <a href="admin.php">(Admin Panel)</a>
-        <?php endif; ?>
-        / <a href="LogOut.php">Logout</a>
-      </p>
-    <?php else: ?>
-      <p><a href="LogIn.php">Login</a> / <a href="SignUp.php">Sign up</a></p>
-    <?php endif; ?>
-  </div>
+<span id="Error" class="error-message"></span>
+        <?php
+                    if(count($errors)) {
+                ?>
+                    <div class="alert alert-danger">
+                        <ul>
+                        <?php foreach($errors as $error):  ?>
+                            <li><?= $error ?></li>
+                        <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <?php   
+                   }
+                ?>
+ <p><a href="LogIn.php">Login</a> / <a href="SignUp.php">Sign up</a></p>
   <div class="container">
     <h1 style="text-align: center;">Login</h1>
     <p style="text-align:center;color:red;">
-      <?php require 'includes/loginerrors.inc.php'; ?>
-  
-
     </p>
     <div class="forma">
       <form name="loginForm" action="includes/login.inc.php" onsubmit="return validateLogin()" method="post" required>
@@ -173,7 +192,9 @@ if ($loginCheck->isLogin()) {
         <br>
         <br>
         <input id="button" type="submit" name="submit" value="Login">
+
       </form>
+      
       <p>If you don't have an account. <a href="SignUp.php">Sign up here</a></p>
     </div>
   </div>
