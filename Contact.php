@@ -30,6 +30,10 @@ body {
     -webkit-font-smoothing: subpixel-antialiased;
     background-color: red;
 }
+.content {
+  flex: 1 0 auto;
+  background-color: #f5f5f5;
+}
 
 .header {
     background-color: #f5f5f5;
@@ -38,17 +42,35 @@ body {
     padding: 10px;
 }
 
-.header1 {
-    background-color: #f5f5f5;
+.headermenu {
     display: flex;
-    justify-content: space-between;
-    padding: 10px;
+    height: 50px;
+    width: 100%;
+    background-color: #263238;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+ .headermenu ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+}
+.headermenu li {
+    display: inline-flex;
+    height: 100%;
+}
+.headermenu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    
+}
+.headermenu li a:hover {
+    background-color: #111111;
 }
 
-.content {
-  flex: 1 0 auto;
-  background-color: #f5f5f5;
-}
 
 
 #button {
@@ -169,12 +191,24 @@ textarea {
         <?php if ($_SESSION['user_type'] == "admin"): ?>
           <a href="admin.php">(Admin Panel)</a>
         <?php endif; ?>
-        / <a href="LogOut.php">Logout</a>
+        / <a class = "link" href="LogOut.php">Logout</a>
       </p>
     <?php else: ?>
-      <p><a href="LogIn.php">Login</a> / <a href="SignUp.php">Sign up</a></p>
+      <p><a  class ="link" href="LogIn.php">Login</a> / <a href="SignUp.php">Sign up</a></p>
     <?php endif; ?>
     </div >
+    <div class="headermenu" id="headermenuid">
+        <ul>
+        <li id="icon"><a id="menuhref" href="javascript:void(0);" onclick="menu()">
+        <i class="fa fa-bars"></i>
+        </a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="about.php">About Us</a></li>
+        <li><a href="products.php">Products</a></li>
+        <li><a href="news.php">News</a></li>
+        <li><a href="contact.php">Contact Us</a></li>
+        </ul>
+    </div>
   
   <div class="maincontainer">
     <h1 style="text-align: center;">Contact Us</h1>
@@ -218,6 +252,7 @@ textarea {
       </form>
     </div>
   </div>
-
+  </div>
+  <?php include 'includes/footer.php'?>
 </body>
 </html>

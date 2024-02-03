@@ -1,26 +1,18 @@
-
-function validateForm() {
-  var username = document.getElementById("username").value;
-  var password = document.getElementById("password").value;
-  var Error = document.getElementById('Error');
-
-
-  if (username.trim() === "") {
-    Error.innerHTML = "please fill in the username";
-      document.getElementById('username').focus();
-      return false;
+function validateLogin() {
+  var email = document.forms["loginForm"]["email"].value;
+  var emailValidate = /^.+@.+..+$/;
+  if (!email.match(emailValidate)) {
+    alert("E-mail must be filled out.");
+    return false;
   }
 
-  if (password.length < 8) {
-     Error.innerHTML = "the password must be longer than 8 characters";
-      document.getElementById('password').focus();
-      return false;
+  var password = document.forms["loginForm"]["password"].value;
+  var passValidate = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+  if (!password.match(passValidate)) {
+    alert("Password must have 6 to 20 characters which contain at least one numeric digit, one uppercase and one lowercase letter.");
+    return false;
   }
 
-  if (!password.match(/[a-zA-Z]/)) {
-    Error.innerHTML = "the password must contain an alphabetic character";
-      document.getElementById('password').focus();
-      return false;
-  }
-   return true;
+  return true;
 }
+

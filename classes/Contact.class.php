@@ -33,9 +33,9 @@ class Contact {
       $this->query->bindParam('entertext', $this->entertext);
 
       if($this->query->execute()) {
-          header("Location: ../Contact.php?submit=success");
+          header("Location: ../contact.php?submit=success");
       } else {
-          hheader("Location: ../Contact.php?submit=failed");
+          hheader("Location: ../contact.php?submit=failed");
       }
 
   }
