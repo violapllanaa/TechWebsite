@@ -17,7 +17,102 @@ if (!$adminCheck->isAdmin()) {
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="style.css">
+<style>
+    *{
+     
+        box-sizing: border-box;
+    }
+    body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+   padding: 0px;
+    margin: 0px;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
 
+.content {
+  flex: 1 0 auto;
+  background-color: #f5f5f5;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.headermenu {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    background-color: #263238;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+ .headermenu ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+}
+.headermenu li {
+    display: inline-flex;
+    height: 100%;
+}
+.headermenu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+.headermenu li a:hover {
+    background-color: #111111;
+}
+#active {
+    background-color: #00897b;
+}
+#active a:hover {
+    background-color: #004d40;
+}
+#icon {
+    display: none;
+    padding-right: 15px;
+}
+#button {
+    background-color: #00897b;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    margin-top: 5px;
+    -webkit-appearance: none;
+}
+#button:hover{
+    background-color: #004d40;
+    cursor: pointer;
+}
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    min-height: 55vh;
+    width: 80%;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    padding: 50px;
+    background-color: #eceff1;
+    -webkit-box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.75);
+}
+</style>
 </head>
 
 <body>
@@ -25,27 +120,39 @@ if (!$adminCheck->isAdmin()) {
 <div class="content">
 
 <div class="header">
-        <a href="index.php"><img src="img/logom.png" width="50px" height="50px"></a>
+      <a href="index.php"><img src="img/Logo2.png" width="70px" height="70px"></a>
 
-        <?php if(isset($_SESSION['name'])): ?>
-        <p>Welcome, <?php echo $_SESSION['name'];?>
-        <?php if($_SESSION['user_type'] == "admin" ): ?>
-            <a href="admin.php">(Admin Panel)</a>
-        <?php endif; ?>
-        / <a href="logout.php">Logout</a></p>
-    <?php else: ?>
-        <p><a href="login.php">Login</a> / <a href="signup.php">Sign up</a></p>
-    <?php endif; ?>
-
+  <?php if (isset($_SESSION['name'])): ?>
+    <p>Welcome,
+      <?php echo $_SESSION['name']; ?>
+      <?php if ($_SESSION['user_type'] == "admin"): ?>
+        <a href="admin.php">(Admin Panel)</a>
+      <?php endif; ?>
+      / <a class = "link" href="LogOut.php">Logout</a>
+    </p>
+  <?php else: ?>
+    <p><a  class ="link" href="LogIn.php">Login</a> / <a href="SignUp.php">Sign up</a></p>
+  <?php endif; ?>
+  </div >
+  <div class="headermenu" id="headermenuid">
+        <ul>
+        <li id="icon"><a id="menuhref" href="javascript:void(0);" onclick="menu()">
+        <i class="fa fa-bars"></i>
+        </a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="aboutus.php">About Us</a></li>
+        <li><a href="products.php">Products</a></li>
+        <li><a href="news.php">News</a></li>
+        <li><a href="contact.php">Contact Us</a></li>
+        </ul>
     </div>
-
 
 
     <div class="maincontainer">
 			<div style="margin: 0 auto;">
         <h1 style="text-align: center">Admin Panel</h1>
         <button id="button" onclick="location.href='admin-users.php'" type="button">Manage Users</button>
-				<button id="button" onclick="location.href='admin-department.php'" type="button">Manage Departments</button>
+				<button id="button" onclick="location.href='admin-product.php'" type="button">Manage Products</button>
 				<button id="button" onclick="location.href='admin-contactus.php'" type="button">Manage Contact Us</button>
 			</div>
     </div>

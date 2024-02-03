@@ -5,6 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Website</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+      
+    h1 {font-family: 'Poppins', sans-serif; font-weight: 600;}
+h2 {font-family: 'Poppins', sans-serif; font-weight: 500;}
+p {font-family: 'Poppins', sans-serif; font-weight: 400;}
+a {font-family: 'Poppins', sans-serif;font-weight: 400;}
+label {font-family: 'Poppins', sans-serif;}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+   padding: 0px;
+    margin: 0px;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+.content {
+  flex: 1 0 auto;
+  background-color: #f5f5f5;
+}
+.header {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.headermenu {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    background-color: #263238;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+ .headermenu ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+}
+.headermenu li {
+    display: inline-flex;
+    height: 100%;
+}
+.headermenu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+.headermenu li a:hover {
+    background-color: #111111;
+}
+
+#active {
+    background-color: #00897b;
+}
+#active a:hover {
+    background-color: #004d40;
+}
+#icon {
+    display: none;
+    padding-right: 15px;
+}
+.content {
+  flex: 1 0 auto;
+  background-color: #f5f5f5;
+}
+    </style>
 </head>
 <body> 
 <div class="content">
