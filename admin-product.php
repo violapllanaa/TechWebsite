@@ -1,5 +1,6 @@
 <?php
 require 'includes/class-autoload.inc.php';
+
 session_start();
 
 $adminCheck = new AdminCheck();
@@ -33,6 +34,22 @@ $productpost->fetchProductPosts();
    padding: 0px;
     margin: 0px;
     -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.blogimage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.addarticle{
+  margin: auto;
+  width: 80%;
+}
+
+.addarticleButtons {
+  display: flex;
+  justify-content:space-between;
 }
 
 .content {
@@ -78,6 +95,12 @@ $productpost->fetchProductPosts();
 }
 #active a:hover {
     background-color: #004d40;
+}
+.section6{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #eceff1;
 }
 #icon {
     display: none;

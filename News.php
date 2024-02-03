@@ -22,6 +22,7 @@
   background-color: #f5f5f5;
 }
 
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -57,7 +58,7 @@
 }
   .main {
   
-    margin-top: 170px;
+  
   margin-bottom: 100px;
     max-width: 1200px;
     width: 95%;
@@ -67,7 +68,7 @@
     align-items: center;
     justify-content: center;
     color: red;
-    margin: 30px;
+   margin: 90px 10px;
   }
   
   .slider-wrapper {

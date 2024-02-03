@@ -26,12 +26,15 @@ body {
   flex: 1 0 auto;
   background-color: #f5f5f5;
 }
+
 .header {
+    
     background-color: #f5f5f5;
     display: flex;
     justify-content: space-between;
     padding: 10px;
 }
+
 .headermenu {
     display: flex;
     height: 50px;

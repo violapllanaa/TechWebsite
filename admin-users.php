@@ -116,18 +116,11 @@ $usersClass->fetchUsers();
     box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.75);
 }
 </style>
-
-
-
 </head>
-
 <body>
-
 <div class="content">
-
 <div class="header">
       <a href="index.php"><img src="img/Logo2.png" width="70px" height="70px"></a>
-
   <?php if (isset($_SESSION['name'])): ?>
     <p>Welcome,
       <?php echo $_SESSION['name']; ?>
