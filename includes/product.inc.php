@@ -11,9 +11,9 @@ $entertext = $_POST['entertext'];
 $file = $_FILES['file'];
 $author = $_SESSION['name'];
 
-$department = new Department($title, $entertext, $file, $telephone);
+$product = new Product($title, $entertext, $file, $telephone);
 
-if (isset($_POST['submit']) && !$department->departmentValidation() ) {
-$department->uploadImage();
-$department->newDepartmentPost();
+if (isset($_POST['submit']) && !$product->productValidation() ) {
+$product->uploadImage();
+$product->newProductPost();
 }
