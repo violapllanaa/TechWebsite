@@ -136,10 +136,7 @@ input[type=email] {
     color: white;
 }
 
-::placeholder {
-  color: white;
-  opacity: 1;
-}
+
 
 input[type=password] {
     width: 100%;
@@ -194,7 +191,7 @@ textarea {
         / <a class = "link" href="LogOut.php">Logout</a>
       </p>
     <?php else: ?>
-      <p><a  class ="link" href="LogIn.php">Login</a> / <a href="SignUp.php">Sign up</a></p>
+      <p><a  class ="link" href="login.php">Login</a> / <a href="signup.php">Sign up</a></p>
     <?php endif; ?>
     </div >
     <div class="headermenu" id="headermenuid">

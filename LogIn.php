@@ -185,7 +185,7 @@ input[type=password] {
         <?php if($_SESSION['user_type'] == "admin" ): ?>
             <a href="admin.php">(Admin Panel)</a>
         <?php endif; ?>
-        / <a href="logout.php">Logout</a></p>
+        / <a href="logout.php" style = "color:red; text-decoration:none;">Logout</a></p>
     <?php else: ?>
         <p><a href="login.php">Login</a> / <a href="signup.php">Sign up</a></p>
     <?php endif; ?>

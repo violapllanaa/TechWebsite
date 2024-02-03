@@ -128,10 +128,10 @@ if (!$adminCheck->isAdmin()) {
       <?php if ($_SESSION['user_type'] == "admin"): ?>
         <a href="admin.php">(Admin Panel)</a>
       <?php endif; ?>
-      / <a class = "link" href="LogOut.php">Logout</a>
+      / <a class = "link" href="logout.php">Logout</a>
     </p>
   <?php else: ?>
-    <p><a  class ="link" href="LogIn.php">Login</a> / <a href="SignUp.php">Sign up</a></p>
+    <p><a  class ="link" href="login.php">Login</a> / <a href="signup.php">Sign up</a></p>
   <?php endif; ?>
   </div >
   <div class="headermenu" id="headermenuid">

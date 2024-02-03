@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+
     <title>Tech Website</title>
     <link rel="stylesheet" href="style.css">
     <style>
@@ -13,14 +15,16 @@ p {font-family: 'Poppins', sans-serif; font-weight: 400;}
 a {font-family: 'Poppins', sans-serif;font-weight: 400;}
 label {font-family: 'Poppins', sans-serif;}
 
-
+*{
+    box-sizing: border-box;
+}
 body {
     display: flex;
     flex-direction: column;
     height: 100vh;
    padding: 0px;
     margin: 0px;
-    -webkit-font-smoothing: subpixel-antialiased;
+
 }
 .content {
   flex: 1 0 auto;
@@ -86,15 +90,15 @@ body {
       <a href="index.php"><img src="img/Logo2.png" width="70px" height="70px"></a>
 
   <?php if (isset($_SESSION['name'])): ?>
-    <p>Welcome,
+    <p class = "paragraph">Welcome,
       <?php echo $_SESSION['name']; ?>
       <?php if ($_SESSION['user_type'] == "admin"): ?>
         <a href="admin.php">(Admin Panel)</a>
       <?php endif; ?>
-      / <a class = "link" href="LogOut.php">Logout</a>
+      / <a class = "link" href="logout.php">Logout</a>
     </p>
   <?php else: ?>
-    <p><a  class ="link" href="LogIn.php">Login</a> / <a href="SignUp.php">Sign up</a></p>
+    <p><a  class ="link" href="login.php">Login</a> / <a href="signup.php">Sign up</a></p>
   <?php endif; ?>
   </div >
   <div class="headermenu" id="headermenuid">
@@ -115,7 +119,7 @@ body {
             <div class="paragraph_main">
                 <h1>The future is now..</h1>
                 <h3>Check our latest products</h3>
-                <a href="Products.php" class="button">Shop now</a>
+                <a href="products.php" class="button">Shop now</a>
             </div>
             <div class="paragraph_img">
             </div>

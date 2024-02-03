@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Tech Website- News</title>
-   <script src="js/slide.js" defer></script>
+ 
   
    <style>
 
@@ -170,7 +170,56 @@
     height: 8px;
     top: -2px;
   }
-  
+  .slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.pika {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .pika:hover {
+  background-color: #717171;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: black;
+}
+
   .slider-scrollbar .scrollbar-thumb::after {
     content: "";
     position: absolute;
@@ -299,6 +348,8 @@
 <?php
    include './includes/footer.php';
 ?>
+
 </div>
+<script src="js/slide.js" defer></script>
 </body>
 </html>
