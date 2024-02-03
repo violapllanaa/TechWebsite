@@ -4,69 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Website</title>
-    <link rel="stylesheet" href="./css/style.css">
-<style>
-    *{
-  margin:0;
-  padding:0;
-  box-sizing: border-box;
-}
-body {
-  max-width: 100%;
-  font-family: 'Poppins', sans-serif;
-}
-.main {
-  margin-top: 130px;
-  width: 100%;
-  padding: 50px 20px;
-  background-size: 100%;
-  background-position: right;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
- background-image: url('./img/blabla.jpg');
- background-repeat: no-repeat;
- 
-}
-.paragraph_main {
-  display: flex;
-  flex-direction: column;
-  width: 600px;
-  height: 500px;
-  display: flex;
-  align-items: center;
-}
-
-.paragraph_main h1 {
-  font-size: 56px;
-  font-weight: 700;
-  width: 500px;
-  height: 100px;
-  margin-top: 150px;
-}
-.paragraph_main h3 {
-  margin: 20px;
-  width: 500px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-}
-.paragraph_main a {
-  align-items: center;
-  width: 190px;
-  height: 50px;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-}
-
-</style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body> 
-    <?php
-   include './includes/headerIndex.php';
-?>
+<div class="content">
+
+<div class="header">
+      <a href="index.php"><img src="img/Logo2.png" width="70px" height="70px"></a>
+
+  <?php if (isset($_SESSION['name'])): ?>
+    <p>Welcome,
+      <?php echo $_SESSION['name']; ?>
+      <?php if ($_SESSION['user_type'] == "admin"): ?>
+        <a href="admin.php">(Admin Panel)</a>
+      <?php endif; ?>
+      / <a class = "link" href="LogOut.php">Logout</a>
+    </p>
+  <?php else: ?>
+    <p><a  class ="link" href="LogIn.php">Login</a> / <a href="SignUp.php">Sign up</a></p>
+  <?php endif; ?>
+  </div >
+  <div class="headermenu" id="headermenuid">
+        <ul>
+        <li id="icon"><a id="menuhref" href="javascript:void(0);" onclick="menu()">
+        <i class="fa fa-bars"></i>
+        </a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="aboutus.php">About Us</a></li>
+        <li><a href="products.php">Products</a></li>
+        <li><a href="news.php">News</a></li>
+        <li><a href="contact.php">Contact Us</a></li>
+        </ul>
+    </div>
+  
+
         <div class="main">
             <div class="paragraph_main">
                 <h1>The future is now..</h1>

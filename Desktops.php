@@ -28,6 +28,56 @@
   height: 100%;
   vertical-align: middle;
 }
+.content {
+  flex: 1 0 auto;
+  background-color: #f5f5f5;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.headermenu {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    background-color: #263238;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+ .headermenu ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+}
+.center-text h2{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  font-size: 28px;
+  text-align: center;
+  position: absolute;
+  margin-top: 100px;
+  color:red;
+
+}
+.headermenu li {
+    display: inline-flex;
+    height: 100%;
+}
+.headermenu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+.headermenu li a:hover {
+    background-color: #111111;
+}
 .search{
   border: none;
   height: 100%;
@@ -88,10 +138,36 @@ padding: 50px 20px;
 </style>
 </head>
 <body>
-  <div class="contanier">
-  <?php
-   include './includes/header.php';
-?>
+<div class="content">
+
+<div class="header">
+      <a href="index.php"><img src="img/Logo2.png" width="70px" height="70px"></a>
+
+  <?php if (isset($_SESSION['name'])): ?>
+    <p>Welcome,
+      <?php echo $_SESSION['name']; ?>
+      <?php if ($_SESSION['user_type'] == "admin"): ?>
+        <a href="admin.php">(Admin Panel)</a>
+      <?php endif; ?>
+      / <a class = "link" href="LogOut.php">Logout</a>
+    </p>
+  <?php else: ?>
+    <p><a  class ="link" href="LogIn.php">Login</a> / <a href="SignUp.php">Sign up</a></p>
+  <?php endif; ?>
+  </div >
+  <div class="headermenu" id="headermenuid">
+        <ul>
+        <li id="icon"><a id="menuhref" href="javascript:void(0);" onclick="menu()">
+        <i class="fa fa-bars"></i>
+        </a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="about.php">About Us</a></li>
+        <li><a href="products.php">Products</a></li>
+        <li><a href="news.php">News</a></li>
+        <li><a href="contact.php">Contact Us</a></li>
+        </ul>
+    </div>
+
 
 <div class="center-text">
   <h2>Desktops</h2>

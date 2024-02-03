@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 03, 2024 at 08:47 PM
+-- Generation Time: Feb 03, 2024 at 10:21 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -56,7 +56,8 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`id`, `name`, `email`, `city`, `gender`, `entertext`) VALUES
-(9, 'Viola', 'violapllana11@gmail.com', 'shkupi', 'female', 'wsx');
+(9, 'Viola', 'violapllana11@gmail.com', 'shkupi', 'female', 'wsx'),
+(10, 'eaqgvqewre', 'egarg@fjhrvbgrdg.erge', 'prishtina', 'female', 'srvgw');
 
 -- --------------------------------------------------------
 
@@ -116,7 +117,7 @@ ALTER TABLE `aboutus`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `users`
