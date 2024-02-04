@@ -133,10 +133,10 @@ if (!$adminCheck->isAdmin()) {
       <?php if ($_SESSION['user_type'] == "admin"): ?>
         <a href="admin.php">(Admin Panel)</a>
       <?php endif; ?>
-      / <a class = "link" href="LogOut.php">Logout</a>
+      / <a class = "link" href="logout.php">Logout</a>
     </p>
   <?php else: ?>
-    <p><a  class ="link" href="LogIn.php">Login</a> / <a href="SignUp.php">Sign up</a></p>
+    <p><a  class ="link" href="login.php">Login</a> / <a href="signup.php">Sign up</a></p>
   <?php endif; ?>
   </div >
   <div class="headermenu" id="headermenuid">
@@ -152,18 +152,6 @@ if (!$adminCheck->isAdmin()) {
         </ul>
     </div>
 
-    <div class="headermenu" id="headermenuid">
-        <ul>
-        <li id="icon"><a id="menuhref" href="javascript:void(0);" onclick="menu()">
-        <i class="fa fa-bars"></i>
-        </a></li>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="about.php">About Us</a></li>
-        <li><a href="products.php">Products</a></li>
-        <li><a href="news.php">News</a></li>
-        <li><a href="contact.php">Contact Us</a></li>
-        </ul>
-    </div>
 
     <div class="maincontainer">
         <h1 style="text-align: center">Edit Product Post</h1>
@@ -181,4 +169,4 @@ if (!$adminCheck->isAdmin()) {
 
 </div>
     </div>
-    <?php include 'footer.php'?>
+    <?php include 'includes/footer.php'?>

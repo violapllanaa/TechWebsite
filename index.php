@@ -17,6 +17,7 @@ label {font-family: 'Poppins', sans-serif;}
 
 *{
     box-sizing: border-box;
+    
 }
 body {
     display: flex;
@@ -24,7 +25,6 @@ body {
     height: 100vh;
    padding: 0px;
     margin: 0px;
-
 }
 .content {
   flex: 1 0 auto;
@@ -38,7 +38,10 @@ body {
     justify-content: space-between;
     padding: 10px;
 }
-
+.header p a{
+    opacity: 1;
+ 
+}
 .headermenu {
     display: flex;
     height: 50px;
@@ -81,6 +84,18 @@ body {
   flex: 1 0 auto;
   background-color: #f5f5f5;
 }
+textarea {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    width:100%;
+    height: 20vh;
+    background-color: #00897b;
+    padding: 5px 5px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    color: white;
+    resize: none;
+}
     </style>
 </head>
 <body> 
@@ -90,30 +105,29 @@ body {
       <a href="index.php"><img src="img/Logo2.png" width="70px" height="70px"></a>
 
   <?php if (isset($_SESSION['name'])): ?>
-    <p class = "paragraph">Welcome,
+    <p>Welcome,
       <?php echo $_SESSION['name']; ?>
       <?php if ($_SESSION['user_type'] == "admin"): ?>
         <a href="admin.php">(Admin Panel)</a>
       <?php endif; ?>
-      / <a class = "link" href="logout.php">Logout</a>
+      / <a class = "link" href="LogOut.php">Logout</a>
     </p>
   <?php else: ?>
     <p><a  class ="link" href="login.php">Login</a> / <a href="signup.php">Sign up</a></p>
   <?php endif; ?>
   </div >
   <div class="headermenu" id="headermenuid">
-        <ul>
-        <li id="icon"><a id="menuhref" href="javascript:void(0);" onclick="menu()">
-        <i class="fa fa-bars"></i>
-        </a></li>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="aboutus.php">About Us</a></li>
-        <li><a href="products.php">Products</a></li>
-        <li><a href="news.php">News</a></li>
-        <li><a href="contact.php">Contact Us</a></li>
-        </ul>
-    </div>
-  
+      <ul>
+      <li id="icon"><a id="menuhref" href="javascript:void(0);" onclick="menu()">
+      <i class="fa fa-bars"></i>
+      </a></li>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="aboutus.php">About Us</a></li>
+      <li><a href="products.php">Products</a></li>
+      <li><a href="news.php">News</a></li>
+      <li><a href="contact.php">Contact Us</a></li>
+      </ul>
+  </div>
 
         <div class="main">
             <div class="paragraph_main">
