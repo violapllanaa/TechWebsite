@@ -1,22 +1,26 @@
-<?php require 'includes/class-autoload.inc.php';
+<?php
+require 'includes/class-autoload.inc.php';
 session_start();
 
 $adminCheck = new AdminCheck();
 if (!$adminCheck->isAdmin()) {
-    header('location: ../login.php');
+	header('location: ../login.php');
 }
 
-$usersClass = new Users();
+	  $connection = new DBConnection();
+		$usersClass = new Users();
+		$usersClass->fetchUserID();
 ?>
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>TechWebsite - Admin Panel</title>
+<title>TechWebsite - Admin Panel</title>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
     <style>
+        
+          
            *{
 	margin:0;
 	padding:0;
@@ -59,9 +63,6 @@ $usersClass = new Users();
     display: inline-flex;
     height: 100%;
 }
-h1{
-    color: red;
-}
 .headermenu li a {
     display: block;
     color: white;
@@ -102,6 +103,8 @@ h1{
 .maincontainer {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     /* justify-content: center; */
     min-height: 55vh;
     width: 80%;
@@ -115,10 +118,25 @@ h1{
     -moz-box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.75);
 }
-</style>
-
+.forma{
+    width: 400px;
+    display: flex;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+}
+.forma input{
+    margin : 10px;
+}
+.forma p{
+    margin-bottom: 15px;
+    color:red;
+}
+h1{
+    color:red;
+}
+    </style>
 </head>
-
 <body>
 
 <div class="content">
@@ -132,10 +150,10 @@ h1{
       <?php if ($_SESSION['user_type'] == "admin"): ?>
         <a href="admin.php">(Admin Panel)</a>
       <?php endif; ?>
-      / <a class = "link" href="LogOut.php">Logout</a>
+      / <a class = "link" href="logout.php">Logout</a>
     </p>
   <?php else: ?>
-    <p><a  class ="link" href="LogIn.php">Login</a> / <a href="SignUp.php">Sign up</a></p>
+    <p><a  class ="link" href="login.php">Login</a> / <a href="signup.php">Sign up</a></p>
   <?php endif; ?>
   </div >
   <div class="headermenu" id="headermenuid">
@@ -150,23 +168,23 @@ h1{
         <li><a href="contact.php">Contact Us</a></li>
         </ul>
     </div>
-        <div class="maincontainer">
-            <h1 style="text-align: center">Add Users</h1>
-            <div style="margin: 0 auto;">
-                <form action="<?php $usersClass->addUsers(); ?>" method="post">
-                    <input type="text" name="name" placeholder="Enter your name"><br>
-                    <input type="text" name="email" placeholder="Enter your email"><br>
-                    <input type="password" name="password" placeholder="Enter your password"><br>
-                    <label>User type:</label><br>
-                    <input type="radio" id="user_type" name="user_type" value="normal">
-                    <label for="normal">Normal</label><br>
-                    <input type="radio" id="user_type" name="user_type" value="admin">
-                    <label for="admin">Admin</label><br>
-                    <input id="button" type="submit" name="submit" value="Submit">
-                </form>
-            </div>
+    <div class="maincontainer">
+        <h1 style="text-align: center">Edit User</h1>
+        <div class = "forma "style="margin: 0 auto;">
+					<form action="<?php $usersClass->editUser();?>" method="post">
+							<input type="text" name="name" value="<?php echo $usersClass->user['name']; ?>" placeholder="Enter your name"><br>
+							<input type="text" name="email" value="<?php echo $usersClass->user['email']; ?>" placeholder="Enter your email"><br>
+							<p>User type is : <?php echo ucwords($usersClass->user['user_type']);?> </p>
+							<label>Change user type:</label><br>
+              <input type="radio" id="user_type" name="user_type" value="normal">
+              <label for="normal">Normal</label><br>
+              <input type="radio" id="user_type" name="user_type" value="admin">
+              <label for="admin">Admin</label><br><br>
+							<input id="button" type="submit" name="submit" value="Submit">
+					</form>
+			</div>
 
 
-        </div>
+</div>
     </div>
-    <?php include 'includes/footer.php' ?>
+    <?php include 'includes/footer.php'?>

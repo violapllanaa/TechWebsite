@@ -1,3 +1,7 @@
+<?php
+require 'includes/class-autoload.inc.php';
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -229,6 +233,58 @@
     bottom: -10px;
   }
   
+
+  @media only screen and (max-width: 768px) {
+
+    .header {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .headermenu ul {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main h1 {
+      margin: 30px 10px;
+    }
+
+    .slider-wrapper {
+      margin-left: 0;
+    }
+
+    .image-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .image-items {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .footer{
+    height: auto;
+  }
+  .footer-container {
+        flex-wrap: wrap;
+        height: 100%;
+        height: auto;
+      }
+
+      .footer-column {
+        width: 100%;
+        max-width: none;
+        padding: 0 10px;
+        height: auto;
+      }
+
+      .footer-columnSOCIAL {
+        width: 100%;
+        max-width: none;
+        padding: 0 10px;
+        height: auto
+      }
 
    </style>
 

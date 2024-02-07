@@ -1,3 +1,4 @@
+
 <?php
 require 'includes/class-autoload.inc.php';
 session_start();
@@ -18,10 +19,12 @@ if (!$adminCheck->isAdmin()) {
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="style.css">
 <style>
-    *{
-     
-        box-sizing: border-box;
-    }
+          *{
+	margin:0;
+	padding:0;
+  box-sizing: border-box;
+}
+
     body {
     display: flex;
     flex-direction: column;

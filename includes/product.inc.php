@@ -9,7 +9,7 @@ if(!isset($_POST['submit'])){
 $title = $_POST['title'];
 $entertext = $_POST['entertext'];
 $file = $_FILES['file'];
-$author = $_SESSION['name'];
+$telephone = $_SESSION['name'];
 
 $product = new Product($title, $entertext, $file, $telephone);
 

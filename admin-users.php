@@ -22,7 +22,8 @@ $usersClass->fetchUsers();
 }
 <style>
 *{
-     
+     margin: 0;
+     padding: 0;
      box-sizing: border-box;
  }
     body {
@@ -72,39 +73,15 @@ $usersClass->fetchUsers();
 .headermenu li a:hover {
     background-color: #111111;
 }
-#active {
-    background-color: #00897b;
-}
-#active a:hover {
-    background-color: #004d40;
-}
-#icon {
-    display: none;
-    padding-right: 15px;
-}
-#button {
-    background-color: #00897b;
-    border: none;
-    border-radius: 15px;
-    color: white;
-    width: 100px;
-    height: 40px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 15px;
-    margin-top: 5px;
-    -webkit-appearance: none;
-}
-#button:hover{
-    background-color: #004d40;
-    cursor: pointer;
-}
+
+
 .maincontainer {
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
     min-height: 55vh;
     width: 80%;
+    height: auto;
     border-radius: 20px;
     margin: auto;
     margin-top: 75px;
@@ -115,6 +92,7 @@ $usersClass->fetchUsers();
     -moz-box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.75);
 }
+
 </style>
 </head>
 <body>
@@ -150,7 +128,6 @@ $usersClass->fetchUsers();
     <div class="maincontainer">
         <h1 style="text-align: center">Manage Users</h1>
 				<p style="text-align:center;"><a href="admin-add_users.php">Add a new user</a></p>
-
 				<div style="margin: 0 auto;">
 										<?php $usersClass->echoUsers(); ?>
 			</div>

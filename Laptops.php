@@ -1,3 +1,7 @@
+<?php
+require 'includes/class-autoload.inc.php';
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

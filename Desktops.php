@@ -1,3 +1,7 @@
+<?php
+require 'includes/class-autoload.inc.php';
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -142,14 +146,13 @@ padding: 50px 20px;
 
 <div class="header">
       <a href="index.php"><img src="img/Logo2.png" width="70px" height="70px"></a>
-
   <?php if (isset($_SESSION['name'])): ?>
     <p>Welcome,
       <?php echo $_SESSION['name']; ?>
       <?php if ($_SESSION['user_type'] == "admin"): ?>
         <a href="admin.php">(Admin Panel)</a>
       <?php endif; ?>
-      / <a class = "link" href="lgout.php">Logout</a>
+      / <a class = "link" href="logout.php">Logout</a>
     </p>
   <?php else: ?>
     <p><a  class ="link" href="login.php">Login</a> / <a href="signup.php">Sign up</a></p>

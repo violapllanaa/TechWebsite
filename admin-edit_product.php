@@ -22,10 +22,11 @@ if (!$adminCheck->isAdmin()) {
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
 
     <style>
-         *{
-     
-     box-sizing: border-box;
- }
+           *{
+	margin:0;
+	padding:0;
+  box-sizing: border-box;
+}
     body {
     display: flex;
     flex-direction: column;
@@ -162,6 +163,7 @@ if (!$adminCheck->isAdmin()) {
 					<input type='text' name='title' value="<?php echo $product->post['title']; ?>" placeholder='Enter your title...' >
 						<label for='entertext'>Enter your text:</label>
 						<textarea placeholder='Enter your text...' name='entertext' ><?php echo  $product->post['entertext']; ?></textarea>
+                        
 							<input id="button" type="submit" name="submit" value="Submit">
 					</form>
 			</div>

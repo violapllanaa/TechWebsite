@@ -6,14 +6,14 @@ class Product {
   private $entertext;
   private $file;
   private $fileNameNew;
-  private $telephone;
+  private $EmriAdminit;
   private $errorCount;
 
-  public function __construct($title, $entertext, $file, $telephone){
+  public function __construct($title, $entertext, $file, $EmriAdminit){
     $this->title = $title;
     $this->entertext = $entertext;
     $this->file = $file;
-    $this->telephone = $telephone;
+    $this->EmriAdminit = $EmriAdminit;
   }
 
 public function uploadImage(){
@@ -33,37 +33,39 @@ public function uploadImage(){
     if ($fileError === 0) {
       if ($fileSize < 1000000) {
         $this->fileNameNew = uniqid('', true). "." .$fileActualExt;
-        $fileDestination = '../img/blog/'.$this->fileNameNew;
+        $fileDestination = '../img/'.$this->fileNameNew;
         move_uploaded_file($fileTmpName, $fileDestination);
       } else {
           header("Location: ../products.php?file=big");
-        //echo "Your file is too big!";
+        echo "Your file is too big!";
       }
     } else {
       header("Location: ../products.php?file=error");
-      //echo "There was an error uploading your file!";
+      echo "There was an error uploading your file!";
     }
   } else {
     header("Location: ../products.php?file=error");
   }
 }
-
 public function newProductPost() {
   $this->connection = new DBConnection();
 
-    $this->sql = 'INSERT INTO Product (title, telephone, entertext, imageurl) VALUES (:title, :telephone, :entertext, :imageurl)';
-    $this->query = $this->connection->getConnection()->prepare($this->sql);
-    $this->query->bindParam('title', $this->title);
-    $this->query->bindParam('telephone', $this->telephone);
-    $this->query->bindParam('entertext', $this->entertext);
-    $this->query->bindParam('imageurl', $this->fileNameNew);
+  $this->sql = 'INSERT INTO Product (title, EmriAdminit, entertext, imageurl) VALUES (:title, :EmriAdminit, :entertext, :imageurl)';
+  $this->query = $this->connection->getConnection()->prepare($this->sql);
+  $this->query->bindParam(':title', $this->title);
+  $this->query->bindParam(':EmriAdminit', $this->EmriAdminit);
+  $this->query->bindParam(':entertext', $this->entertext);
+  $this->query->bindParam(':imageurl', $this->fileNameNew);
+  
+  if ($this->query->execute()) {
+      header("Location: ../products.php?submit=success");
+  } else {
+      header("Location: ../products.php?submit=failed");
+  }
 
-    if($this->query->execute()) {
-        header("Location: ../products.php?submit=success");
-    } else {
-        header("Location: ../products.php?submit=failed");
-    }
+  $this->connection->closeConnection();
 }
+
 
 public function ProductValidation(){
   if (empty($_POST['title'])) {

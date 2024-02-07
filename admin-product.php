@@ -4,6 +4,7 @@ require 'includes/class-autoload.inc.php';
 session_start();
 
 $adminCheck = new AdminCheck();
+
 if (!$adminCheck->isAdmin()) {
 	header('location: ../login.php');
 }
@@ -23,10 +24,11 @@ $productpost->fetchProductPosts();
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
 
     <style>
-         *{
-     
-     box-sizing: border-box;
- }
+           *{
+	margin:0;
+	padding:0;
+  box-sizing: border-box;
+}
     body {
     display: flex;
     flex-direction: column;
@@ -106,6 +108,32 @@ $productpost->fetchProductPosts();
     display: none;
     padding-right: 15px;
 }
+.section6{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #eceff1;
+}
+.section6 h1{
+    padding-top: 20px;
+    text-align: center;
+}
+.article {
+    padding: 75px 0px 100px 0px;
+    width: 350px;
+    color: black;
+    height: auto;
+}
+.blog {
+    display: flex;
+    align-items:baseline;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+
 #button {
     background-color: #00897b;
     border: none;
@@ -123,6 +151,7 @@ $productpost->fetchProductPosts();
     background-color: #004d40;
     cursor: pointer;
 }
+
 .maincontainer {
     display: flex;
     flex-direction: column;
@@ -139,6 +168,184 @@ $productpost->fetchProductPosts();
     -moz-box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.75);
 }
+h1 {font-family: 'Poppins', sans-serif; font-weight: 600;}
+h2 {font-family: 'Poppins', sans-serif; font-weight: 500;}
+p {font-family: 'Poppins', sans-serif; font-weight: 400;}
+a {font-family: 'Poppins', sans-serif;font-weight: 400;}
+label {font-family: 'Poppins', sans-serif;}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+   padding: 0px;
+    margin: 0px;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.content {
+  flex: 1 0 auto;
+  background-color: #f5f5f5;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.headermenu {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    background-color: #263238;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+ .headermenu ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+}
+.headermenu li {
+    display: inline-flex;
+    height: 100%;
+}
+.headermenu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+.headermenu li a:hover {
+    background-color: #111111;
+}
+#active {
+    background-color: #00897b;
+}
+#active a:hover {
+    background-color: #004d40;
+}
+#icon {
+    display: none;
+    padding-right: 15px;
+}
+
+
+.forma {
+    margin: auto;
+    width: 50%;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 5px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #00897b;
+    color: white;
+}
+
+input[type=email] {
+    width: 100%;
+    padding: 12px 5px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #00897b;
+    color: white;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+input[type=password] {
+    width: 100%;
+    padding: 12px 5px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #00897b;
+    color: white;
+}
+
+
+
+#city {
+   width: 100%;
+    height: 35px;
+    padding: 0px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #00897b;
+    color: white;
+    -webkit-appearance: none;
+}
+
+textarea {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    width:100%;
+    height: 20vh;
+    background-color: #00897b;
+    padding: 5px 5px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    color: white;
+    resize: none;
+}
+
+.section6{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #eceff1;
+}
+.section6 h1{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.article {
+    padding: 75px 0px 100px 0px;
+    width: 350px;
+    color: black;
+    height: auto;
+}
+.blog {
+    display: flex;
+    align-items:baseline;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.blogimage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.addarticle{
+  margin: auto;
+  width: 80%;
+}
+
+.addarticleButtons {
+  display: flex;
+  justify-content:space-between;
+}
+
 </style>
 
 </head>

@@ -23,7 +23,7 @@ public function echoProductPosts(){
     <div class='article'>
     <img class='blogimage' src='img/blog/{$posturl}'>
     <h2>{$post['title']}</h2>
-    <p>Telephone: {$post['telephone']}</p>
+    <p>EmriAdminit : {$post['EmriAdminit']}</p>
     <p>{$content}</p>
     </div>
     ";
@@ -41,7 +41,7 @@ public function echoProductPostsAdmin(){
     <div class='article'>
     <img class='blogimage' src='img/blog/{$posturl}'>
     <h2>{$post['title']}</h2>
-    <p>Telephone: {$post['telephone']}</p>
+    <p>EmriAdminit : {$post['telephone']}</p>
     <p>{$content}</p>
     <a href='admin-edit_product.php?id={$id}'><button id='button'>Edit</button></a>
     <a href='admin-delete_product.php?id={$id}'><button id='button'>Delete</button></a>
@@ -81,8 +81,7 @@ public function editProduct(){
 
         $query->execute();
 
-        header("Location: admin-product
-    .php");
+        header("Location: admin-product.php");
     }
 }
 

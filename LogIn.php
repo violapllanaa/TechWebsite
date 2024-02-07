@@ -1,3 +1,4 @@
+
 <?php
 require 'includes/class-autoload.inc.php';
 session_start();
@@ -25,7 +26,11 @@ h2 {font-family: 'Poppins', sans-serif; font-weight: 500;}
 p {font-family: 'Poppins', sans-serif; font-weight: 400;}
 a {font-family: 'Poppins', sans-serif;font-weight: 400;}
 label {font-family: 'Poppins', sans-serif;}
-
+*{
+	margin:0;
+	padding:0;
+  box-sizing: border-box;
+}
 
 body {
     display: flex;

@@ -1,3 +1,7 @@
+<?php
+require 'includes/class-autoload.inc.php';
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +13,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body{
+  width: 100%;
+  
 }
 .contanier {
   max-width: 100%;
@@ -151,6 +159,56 @@ padding: 50px 20px;
 .p1 img:hover{
   transform: scale(0.9);
 }
+@media only screen and (max-width: 768px) {
+ 
+            .productss {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                padding: 50px 10px;
+            }
+
+            .main {
+                margin-bottom: 20px;
+            }
+
+            .headermenu {
+                flex-wrap: wrap;
+            }
+
+            .headermenu li {
+                flex: 1 0 50%;
+            }
+
+            .center-text h2 {
+                margin-top: 50px;
+            }
+            .footer{
+    height: auto;
+  }
+  .footer-container {
+        flex-wrap: wrap;
+        height: 100%;
+        height: auto;
+      }
+
+      .footer-column {
+        width: 100%;
+        max-width: none;
+        padding: 0 10px;
+        height: auto;
+      }
+
+      .footer-columnSOCIAL {
+        width: 100%;
+        max-width: none;
+        padding: 0 10px;
+        height: auto
+      }
+        }
+ @media only screen and (max-width: 480px) {
+            .headermenu li {
+                flex: 1 0 100%;
+            }
+        }
 
   </style>
 </head>
