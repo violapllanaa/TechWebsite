@@ -1,4 +1,3 @@
-
 <?php
     require 'includes/class-autoload.inc.php';
     session_start();
@@ -214,10 +213,6 @@ input[type=password] {
         <p>If you have an account. <a href="login.php">Log In here</a></p>
     </form>
     </div>
-
-
-
 </div>
-
 </div>
 <?php include 'includes/footer.php'?>

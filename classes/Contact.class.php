@@ -35,8 +35,9 @@ class Contact {
       if($this->query->execute()) {
           header("Location: ../contact.php?submit=success");
       } else {
-          hheader("Location: ../contact.php?submit=failed");
+          header("Location: ../contact.php?submit=failed");
       }
 
   }
 }
+

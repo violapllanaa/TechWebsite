@@ -1,4 +1,3 @@
-
 <?php
 require 'includes/class-autoload.inc.php';
 session_start();
@@ -24,7 +23,6 @@ if (!$adminCheck->isAdmin()) {
 	padding:0;
   box-sizing: border-box;
 }
-
     body {
     display: flex;
     flex-direction: column;

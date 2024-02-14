@@ -41,7 +41,7 @@ public function echoProductPostsAdmin(){
     <div class='article'>
     <img class='blogimage' src='img/blog/{$posturl}'>
     <h2>{$post['title']}</h2>
-    <p>EmriAdminit : {$post['telephone']}</p>
+    <p>EmriAdminit : {$post['EmriAdminit']}</p>
     <p>{$content}</p>
     <a href='admin-edit_product.php?id={$id}'><button id='button'>Edit</button></a>
     <a href='admin-delete_product.php?id={$id}'><button id='button'>Delete</button></a>

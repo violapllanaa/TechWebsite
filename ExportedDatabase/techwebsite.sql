@@ -23,22 +23,22 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
---
--- Table structure for table `aboutus`
---
 
-CREATE TABLE `aboutus` (
+CREATE TABLE `product` (
   `id` int(11) NOT NULL,
   `title` text NOT NULL,
-  `desc1` text NOT NULL,
-  `desc2` text NOT NULL,
-  `desc3` text NOT NULL,
-  `desc4` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
+  `EmriAdminit` text NOT NULL,
+  `entertext` text NOT NULL,
+  `imageurl` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`id`, `title`, `EmriAdminit`, `entertext`, `imageurl`) VALUES
+(3, 'Desktop', '+Viola', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'pediatry.jpg'),
+
 -- Table structure for table `contact`
 --
 
